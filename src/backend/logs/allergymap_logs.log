@@ -1,0 +1,66 @@
+[2020-12-18 21:33:50,447 | DEBUG | app:backend.web.web_app.main.routes]: session state: <SecureCookieSession {'csrf_token': 'b111f5eafe90bdce62dca61dafa9b1bd5a1b575b'}>
+[2020-12-18 21:33:51,655 | DEBUG | app:backend.web.database_api]: Date query for VAS: 2020-12-18 00:00:00
+[2020-12-18 21:33:51,743 | DEBUG | app:backend.web.database_api]: Date query for Twitter: 2020-12-18 00:00:00
+[2020-12-18 21:33:51,832 | DEBUG | app:backend.web.database_api]: Date query for pollen: 2020-12-18 04:00:00
+[2020-12-18 21:33:51,860 | DEBUG | app:backend.web.database_api]: Date query for VAS: 2020-12-18 00:00:00
+[2020-12-18 21:33:51,861 | DEBUG | app:backend.web.database_api]: Date query for pollen: 2020-12-18 04:00:00
+[2020-12-18 21:33:51,913 | DEBUG | app:backend.web.database_api]: Date query for VAS: 2020-12-18 00:00:00
+[2020-12-18 21:33:53,036 | DEBUG | app:backend.web.database_api]: Date query for Twitter: 2020-12-18 00:00:00
+[2020-12-18 21:33:53,188 | DEBUG | app:backend.web.database_api]: Date query for pollen: 2020-12-18 04:00:00
+[2020-12-18 21:33:53,235 | DEBUG | app:backend.web.database_api]: Date query for humidity: 2020-12-18 19:33:53.234506
+[2020-12-18 21:33:53,711 | DEBUG | app:backend.web.database_api]: Date query for VAS: 2020-12-18 00:00:00
+[2020-12-18 21:33:53,830 | DEBUG | app:backend.web.database_api]: Date query for Twitter: 2020-12-18 00:00:00
+[2020-12-18 21:33:58,623 | DEBUG | app:backend.web.database_api]: Date query for pollen: 2020-12-18 04:00:00
+[2020-12-18 21:33:58,628 | DEBUG | app:backend.web.database_api]: Date query for pollen: 2020-12-18 04:00:00
+[2020-12-18 21:34:01,047 | DEBUG | app:backend.web.database_api]: Date query for pollen: 2020-12-18 04:00:00
+[2020-12-18 21:34:01,047 | DEBUG | app:backend.web.database_api]: Date query for pollen: 2020-12-18 04:00:00
+[2020-12-18 21:34:03,758 | DEBUG | app:backend.web.database_api]: Date query for pollen: 2020-12-18 04:00:00
+[2020-12-18 21:34:03,783 | DEBUG | app:backend.web.database_api]: Date query for pollen: 2020-12-18 04:00:00
+[2020-12-18 21:34:13,727 | DEBUG | app:backend.web.database_api]: Date query for Twitter: 2020-12-17 19:34:13.726003
+[2020-12-18 21:34:20,302 | DEBUG | app:backend.web.database_api]: Date query for humidity: 2020-12-18 19:33:20.302422
+[2020-12-18 21:34:25,639 | DEBUG | app:backend.web.database_api]: Date query for humidity: 2020-12-15 19:34:25.639706
+[2020-12-18 21:34:25,640 | DEBUG | app:backend.web.database_api]: [ START: 2020-12-18 00:00:00 | END: 2020-12-15 00:00:00 ]
+[2020-12-18 21:34:26,744 | INFO | app:backend.web.database_api]: DATA ONLY FROM BOTH COLLECTIONS.                                  TODAY COL. RETURNED -> 5                                  MAIN COLLECTION. RETURNED -> 3
+[2020-12-18 21:37:09,881 | INFO | app:backend.web.web_app.users_auth.routes]: Successfull log in for user 'Tester'
+[2020-12-18 21:37:10,031 | DEBUG | app:backend.web.web_app.main.routes]: session state: <SecureCookieSession {'csrf_token': 'b111f5eafe90bdce62dca61dafa9b1bd5a1b575b', 'email': 'tester@email.com', 'first_login': False, 'logged_in': True, 'username': 'Tester'}>
+[2020-12-18 21:37:10,405 | DEBUG | app:backend.web.database_api]: Date query for pollen: 2020-12-18 04:00:00
+[2020-12-18 21:37:10,407 | DEBUG | app:backend.web.database_api]: Date query for VAS: 2020-12-18 00:00:00
+[2020-12-18 21:37:10,408 | DEBUG | app:backend.web.database_api]: Date query for pollen: 2020-12-18 04:00:00
+[2020-12-18 21:37:10,436 | DEBUG | app:backend.web.database_api]: Date query for VAS: 2020-12-18 00:00:00
+[2020-12-18 21:37:10,437 | DEBUG | app:backend.web.database_api]: Date query for Twitter: 2020-12-18 00:00:00
+[2020-12-18 21:37:10,470 | DEBUG | app:backend.web.database_api]: Date query for VAS: 2020-12-18 00:00:00
+[2020-12-18 21:37:10,540 | DEBUG | app:backend.web.database_api]: Date query for Twitter: 2020-12-18 00:00:00
+[2020-12-18 21:37:10,787 | DEBUG | app:backend.web.database_api]: Date query for pollen: 2020-12-18 04:00:00
+[2020-12-18 21:37:10,924 | DEBUG | app:backend.web.database_api]: Date query for VAS: 2020-12-18 00:00:00
+[2020-12-18 21:37:11,031 | DEBUG | app:backend.web.database_api]: Date query for humidity: 2020-12-18 19:37:11.031492
+[2020-12-18 21:37:11,047 | DEBUG | app:backend.web.database_api]: Date query for Twitter: 2020-12-18 00:00:00
+[2020-12-18 21:37:23,231 | DEBUG | app:backend.web.web_app.allergy_settings.routes]: GET Request
+[2020-12-18 21:37:26,018 | DEBUG | app:backend.web.web_app.main.routes]: session state: <SecureCookieSession {'csrf_token': 'b111f5eafe90bdce62dca61dafa9b1bd5a1b575b', 'email': 'tester@email.com', 'first_login': False, 'logged_in': True, 'username': 'Tester'}>
+[2020-12-18 21:37:26,233 | DEBUG | app:backend.web.database_api]: Date query for pollen: 2020-12-18 04:00:00
+[2020-12-18 21:37:26,245 | DEBUG | app:backend.web.database_api]: Date query for pollen: 2020-12-18 04:00:00
+[2020-12-18 21:37:26,246 | DEBUG | app:backend.web.database_api]: Date query for VAS: 2020-12-18 00:00:00
+[2020-12-18 21:37:26,273 | DEBUG | app:backend.web.database_api]: Date query for VAS: 2020-12-18 00:00:00
+[2020-12-18 21:37:26,274 | DEBUG | app:backend.web.database_api]: Date query for Twitter: 2020-12-18 00:00:00
+[2020-12-18 21:37:26,408 | DEBUG | app:backend.web.database_api]: Date query for VAS: 2020-12-18 00:00:00
+[2020-12-18 21:37:26,486 | DEBUG | app:backend.web.database_api]: Date query for Twitter: 2020-12-18 00:00:00
+[2020-12-18 21:37:26,883 | DEBUG | app:backend.web.database_api]: Date query for humidity: 2020-12-18 19:37:26.883909
+[2020-12-18 21:37:26,883 | DEBUG | app:backend.web.database_api]: Date query for pollen: 2020-12-18 04:00:00
+[2020-12-18 21:37:27,028 | DEBUG | app:backend.web.database_api]: Date query for VAS: 2020-12-18 00:00:00
+[2020-12-18 21:37:27,146 | DEBUG | app:backend.web.database_api]: Date query for Twitter: 2020-12-18 00:00:00
+[2020-12-18 21:37:45,632 | DEBUG | app:backend.web.web_api.home.routes]: VAS INPUTS: 6, 6, 6, 6, Yes, 6, 37.686346495954275, 21.920896874999983, True, 2020-12-18 19:37:45.632257
+[2020-12-18 21:38:03,435 | DEBUG | app:backend.web.web_app.users_auth.routes]:  Change password button: False | Update info button: False | Delete button: False
+[2020-12-18 21:38:03,437 | INFO | app:backend.web.web_app.users_auth.routes]: GET Request
+[2020-12-18 21:38:08,529 | DEBUG | app:backend.web.web_app.allergy_settings.routes]: GET Request
+[2020-12-18 21:38:09,651 | DEBUG | app:backend.web.web_app.allergy_settings.routes]: GET Request
+[2020-12-18 21:38:11,112 | DEBUG | app:backend.web.web_app.main.routes]: session state: <SecureCookieSession {'csrf_token': 'b111f5eafe90bdce62dca61dafa9b1bd5a1b575b', 'email': 'tester@email.com', 'first_login': False, 'logged_in': True, 'username': 'Tester'}>
+[2020-12-18 21:38:11,441 | DEBUG | app:backend.web.database_api]: Date query for pollen: 2020-12-18 04:00:00
+[2020-12-18 21:38:11,462 | DEBUG | app:backend.web.database_api]: Date query for pollen: 2020-12-18 04:00:00
+[2020-12-18 21:38:11,492 | DEBUG | app:backend.web.database_api]: Date query for VAS: 2020-12-18 00:00:00
+[2020-12-18 21:38:11,493 | DEBUG | app:backend.web.database_api]: Date query for VAS: 2020-12-18 00:00:00
+[2020-12-18 21:38:11,494 | DEBUG | app:backend.web.database_api]: Date query for Twitter: 2020-12-18 00:00:00
+[2020-12-18 21:38:11,553 | DEBUG | app:backend.web.database_api]: Date query for VAS: 2020-12-18 00:00:00
+[2020-12-18 21:38:11,629 | DEBUG | app:backend.web.database_api]: Date query for Twitter: 2020-12-18 00:00:00
+[2020-12-18 21:38:12,109 | DEBUG | app:backend.web.database_api]: Date query for pollen: 2020-12-18 04:00:00
+[2020-12-18 21:38:12,189 | DEBUG | app:backend.web.database_api]: Date query for humidity: 2020-12-18 19:38:12.189000
+[2020-12-18 21:38:12,216 | DEBUG | app:backend.web.database_api]: Date query for VAS: 2020-12-18 00:00:00
+[2020-12-18 21:38:12,265 | DEBUG | app:backend.web.database_api]: Date query for Twitter: 2020-12-18 00:00:00

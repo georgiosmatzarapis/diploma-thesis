@@ -1,0 +1,133 @@
+{% extends 'snippets/layouts/layout_general.html' %}
+
+
+{% block links %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/myhealth.css') }}">
+{% endblock links %}
+
+
+{% block content %}
+<!-- myHealth graph -->
+<div class="content_others">
+    <div id="myhealth_heading">
+        <h2 class="text-center"> <span style="color:rgb(10, 179, 179);">Health Status Graph</span></h2>
+    </div>
+    <!-- HightChart -->
+    <div id="container"></div>
+    <br><br>
+
+    <!-- myAllergyMap -->
+    <div id="myhealth_heading">
+        <h2 class="text-center"> <span style="color:rgb(10, 179, 179);">myAllergy Map</span></h2>
+    </div>
+
+    <div class="alert alert-secondary" role="alert" style="padding: 8px;">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <div class="form-field">
+                <strong style="font-weight: bold;">
+                    <i class='far fa-clock'></i>
+                    {{ form.time_interval.label(class="form-control-label") }}
+                </strong>
+                {{form.time_interval(class="browser-default custom-select", id="time_picker")}}
+            </div>
+        </form>
+    </div>
+
+    <!-- Map -->
+    <div class="canvas" id="myhealth_map"></div>
+</div>
+{% endblock content %}
+
+
+{% block logged_in_user %}
+<br>
+<!-- sidecard 1 -->
+<div class="card w-95">
+    <div class="card-header">
+        <div class="text-center">
+            Hello <b>{{ session.get('username') }}</b>, welcome to myHealth page !
+        </div>
+    </div>
+    <div class="card-body">
+        <p class="card-title"><i class='far fa-hand-point-right'></i><b>&nbsp;&nbsp;Useful Tip:</b></p>
+        <div class="card-text">
+            <div id="text_align_center">
+                <p>Do not forget to insert your daily data about your feelings at <a href="{{url_for('main.home')}}"
+                        class="alert-link">home page</a>.<br>
+                    By doing that you will receive more accurate results in 'Health Status Graph' and 'myAllergyMap'
+                    sections respectively.</p>
+            </div>
+        </div>
+    </div>
+</div><br>
+
+<!-- sidecard 2 -->
+<div class="card">
+    <div class="card-header">
+        <div class="text-center">
+            <i class='far fa-calendar-check'></i>&nbsp;&nbsp;<b>Allergy Informations Update</b>
+        </div>
+    </div>
+    <div class="card-body">
+        <p class="card-text">We recommend you to update your allergy informations if there is any change, every<br>2 - 4
+            weeks.</p>
+        <p><a href="{{url_for('allergy_settings.allergy_data')}}" class="btn btn-outline-info btn-block btn-md">Update Allergy
+                Data</a></p>
+        <p><a href="{{url_for('allergy_settings.allergy_symptoms')}}" class="btn btn-outline-info btn-block btn-md">Update
+                Allergy Symptoms</a></p>
+        <p><a href="{{url_for('allergy_settings.allergens')}}" class="btn btn-outline-info btn-block btn-md">Update
+                Allergens</a></p>
+        <p><a href="{{url_for('allergy_settings.medicines')}}" class="btn btn-outline-info btn-block btn-md">Update
+                Medicines</a></p>
+    </div>
+</div><br>
+
+<!-- sidecart 3 -->
+<div class="card">
+    <div class="card-header">
+        <div class="text-center">
+            <i class='fas fa-info'></i>&nbsp;&nbsp;<b>Guide for myAllergy Map</b>
+        </div>
+    </div>
+    <div class="card-body">
+        <b>How to use:</b>
+        <ol>
+            <li>
+                Select the time interval for which you desire to track your allergy.
+            </li>
+            <li>
+                Zoom-in to your desirable area to get more accurate results.
+            </li>
+        </ol>
+        <b>Symptoms scale:</b>
+        <ul>
+            <li><span class="badge badge-pill badge-info">Low</span></li>
+            <li><span class="badge badge-pill badge-primary">Medium</span></li>
+            <li><span class="badge badge-pill badge-danger">High</span></li>
+        </ul>
+        <b>Tip:</b>
+        <p>The greater the radius of the red circle, the more symptoms have been submitted for this area.</p>
+    </div>
+</div><br>
+{% endblock logged_in_user %}
+
+
+{% block extra_scripts_logged_in %}
+<!-- Highstock -->
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/stock/modules/data.js"></script>
+<script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+
+<!-- GMAP -->
+<script
+    src="https://maps.googleapis.com/maps/api/js?key={{google_maps_api_key}}&libraries=visualization&callback=initMap"
+    async defer></script>
+
+<!-- My scripts -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/myhealth/highstock.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/myhealth/lib.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/myhealth/map_settings.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/myhealth/myallergy_map.js') }}"></script>
+{% endblock extra_scripts_logged_in %}

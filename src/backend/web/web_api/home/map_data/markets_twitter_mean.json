@@ -1,0 +1,974 @@
+[
+    {
+        "market": "ABE",
+        "tweets_mean": 12
+    },
+    {
+        "market": "ABI",
+        "tweets_mean": 22
+    },
+    {
+        "market": "ABQ",
+        "tweets_mean": 3
+    },
+    {
+        "market": "ABR",
+        "tweets_mean": 2
+    },
+    {
+        "market": "ABY",
+        "tweets_mean": 7
+    },
+    {
+        "market": "ACT",
+        "tweets_mean": 22
+    },
+    {
+        "market": "ACY",
+        "tweets_mean": 6
+    },
+    {
+        "market": "AHN",
+        "tweets_mean": 4
+    },
+    {
+        "market": "ALB",
+        "tweets_mean": 14
+    },
+    {
+        "market": "ALO",
+        "tweets_mean": 1
+    },
+    {
+        "market": "ALS",
+        "tweets_mean": 3
+    },
+    {
+        "market": "AMA",
+        "tweets_mean": 8
+    },
+    {
+        "market": "AOO",
+        "tweets_mean": 5
+    },
+    {
+        "market": "APN",
+        "tweets_mean": 10
+    },
+    {
+        "market": "AST",
+        "tweets_mean": 8
+    },
+    {
+        "market": "ATL",
+        "tweets_mean": 4
+    },
+    {
+        "market": "AUS",
+        "tweets_mean": 22
+    },
+    {
+        "market": "AUW",
+        "tweets_mean": 7
+    },
+    {
+        "market": "AVL",
+        "tweets_mean": 5
+    },
+    {
+        "market": "AVP",
+        "tweets_mean": 15
+    },
+    {
+        "market": "BDL",
+        "tweets_mean": 10
+    },
+    {
+        "market": "BDR",
+        "tweets_mean": 12
+    },
+    {
+        "market": "BFF",
+        "tweets_mean": 2
+    },
+    {
+        "market": "BFL",
+        "tweets_mean": 39
+    },
+    {
+        "market": "BFM",
+        "tweets_mean": 2
+    },
+    {
+        "market": "BGM",
+        "tweets_mean": 15
+    },
+    {
+        "market": "BGR",
+        "tweets_mean": 2
+    },
+    {
+        "market": "BHM",
+        "tweets_mean": 2
+    },
+    {
+        "market": "BHX",
+        "tweets_mean": 39
+    },
+    {
+        "market": "BIL",
+        "tweets_mean": 0
+    },
+    {
+        "market": "BIS",
+        "tweets_mean": 1
+    },
+    {
+        "market": "BJI",
+        "tweets_mean": 3
+    },
+    {
+        "market": "BKW",
+        "tweets_mean": 3
+    },
+    {
+        "market": "BLI",
+        "tweets_mean": 8
+    },
+    {
+        "market": "BNA",
+        "tweets_mean": 2
+    },
+    {
+        "market": "BNO",
+        "tweets_mean": 5
+    },
+    {
+        "market": "BOI",
+        "tweets_mean": 5
+    },
+    {
+        "market": "BOS",
+        "tweets_mean": 2
+    },
+    {
+        "market": "BPT",
+        "tweets_mean": 14
+    },
+    {
+        "market": "BRL",
+        "tweets_mean": 5
+    },
+    {
+        "market": "BRO",
+        "tweets_mean": 22
+    },
+    {
+        "market": "BTM",
+        "tweets_mean": 1
+    },
+    {
+        "market": "BTR",
+        "tweets_mean": 4
+    },
+    {
+        "market": "BTV",
+        "tweets_mean": 23
+    },
+    {
+        "market": "BUF",
+        "tweets_mean": 23
+    },
+    {
+        "market": "BWG",
+        "tweets_mean": 6
+    },
+    {
+        "market": "BWI",
+        "tweets_mean": 6
+    },
+    {
+        "market": "CAE",
+        "tweets_mean": 3
+    },
+    {
+        "market": "CAK",
+        "tweets_mean": 11
+    },
+    {
+        "market": "CAR",
+        "tweets_mean": 2
+    },
+    {
+        "market": "CGI",
+        "tweets_mean": 4
+    },
+    {
+        "market": "CHA",
+        "tweets_mean": 4
+    },
+    {
+        "market": "CHS",
+        "tweets_mean": 3
+    },
+    {
+        "market": "CID",
+        "tweets_mean": 1
+    },
+    {
+        "market": "CIN",
+        "tweets_mean": 9
+    },
+    {
+        "market": "CLE",
+        "tweets_mean": 11
+    },
+    {
+        "market": "CLT",
+        "tweets_mean": 6
+    },
+    {
+        "market": "CLX",
+        "tweets_mean": 4
+    },
+    {
+        "market": "CMH",
+        "tweets_mean": 11
+    },
+    {
+        "market": "CMI",
+        "tweets_mean": 13
+    },
+    {
+        "market": "CNK",
+        "tweets_mean": 2
+    },
+    {
+        "market": "CON",
+        "tweets_mean": 2
+    },
+    {
+        "market": "COS",
+        "tweets_mean": 5
+    },
+    {
+        "market": "COU",
+        "tweets_mean": 2
+    },
+    {
+        "market": "CPR",
+        "tweets_mean": 1
+    },
+    {
+        "market": "CRP",
+        "tweets_mean": 22
+    },
+    {
+        "market": "CRW",
+        "tweets_mean": 6
+    },
+    {
+        "market": "CSG",
+        "tweets_mean": 4
+    },
+    {
+        "market": "CXY",
+        "tweets_mean": 6
+    },
+    {
+        "market": "CYS",
+        "tweets_mean": 3
+    },
+    {
+        "market": "DAB",
+        "tweets_mean": 13
+    },
+    {
+        "market": "DAY",
+        "tweets_mean": 13
+    },
+    {
+        "market": "DCA",
+        "tweets_mean": 6
+    },
+    {
+        "market": "DDC",
+        "tweets_mean": 8
+    },
+    {
+        "market": "DEN",
+        "tweets_mean": 5
+    },
+    {
+        "market": "DFW",
+        "tweets_mean": 12
+    },
+    {
+        "market": "DIK",
+        "tweets_mean": 0
+    },
+    {
+        "market": "DLH",
+        "tweets_mean": 6
+    },
+    {
+        "market": "DNL",
+        "tweets_mean": 4
+    },
+    {
+        "market": "DOV",
+        "tweets_mean": 6
+    },
+    {
+        "market": "DRT",
+        "tweets_mean": 22
+    },
+    {
+        "market": "DSM",
+        "tweets_mean": 2
+    },
+    {
+        "market": "DTW",
+        "tweets_mean": 10
+    },
+    {
+        "market": "EAU",
+        "tweets_mean": 4
+    },
+    {
+        "market": "EBQ",
+        "tweets_mean": 5
+    },
+    {
+        "market": "ELK",
+        "tweets_mean": 6
+    },
+    {
+        "market": "ELP",
+        "tweets_mean": 12
+    },
+    {
+        "market": "ELY",
+        "tweets_mean": 3
+    },
+    {
+        "market": "ERI",
+        "tweets_mean": 14
+    },
+    {
+        "market": "EUG",
+        "tweets_mean": 8
+    },
+    {
+        "market": "EVV",
+        "tweets_mean": 9
+    },
+    {
+        "market": "EWR",
+        "tweets_mean": 12
+    },
+    {
+        "market": "EYW",
+        "tweets_mean": 13
+    },
+    {
+        "market": "FAR",
+        "tweets_mean": 2
+    },
+    {
+        "market": "FAT",
+        "tweets_mean": 22
+    },
+    {
+        "market": "FCA",
+        "tweets_mean": 0
+    },
+    {
+        "market": "FLG",
+        "tweets_mean": 4
+    },
+    {
+        "market": "FLO",
+        "tweets_mean": 6
+    },
+    {
+        "market": "FMN",
+        "tweets_mean": 3
+    },
+    {
+        "market": "FNT",
+        "tweets_mean": 10
+    },
+    {
+        "market": "FSD",
+        "tweets_mean": 2
+    },
+    {
+        "market": "FSM",
+        "tweets_mean": 8
+    },
+    {
+        "market": "FTW",
+        "tweets_mean": 22
+    },
+    {
+        "market": "FWA",
+        "tweets_mean": 12
+    },
+    {
+        "market": "GEG",
+        "tweets_mean": 3
+    },
+    {
+        "market": "GFK",
+        "tweets_mean": 3
+    },
+    {
+        "market": "GGW",
+        "tweets_mean": 0
+    },
+    {
+        "market": "GJT",
+        "tweets_mean": 3
+    },
+    {
+        "market": "GLD",
+        "tweets_mean": 3
+    },
+    {
+        "market": "GPT",
+        "tweets_mean": 4
+    },
+    {
+        "market": "GRB",
+        "tweets_mean": 7
+    },
+    {
+        "market": "GRI",
+        "tweets_mean": 2
+    },
+    {
+        "market": "GRR",
+        "tweets_mean": 10
+    },
+    {
+        "market": "GSO",
+        "tweets_mean": 7
+    },
+    {
+        "market": "GSP",
+        "tweets_mean": 6
+    },
+    {
+        "market": "GTB",
+        "tweets_mean": 23
+    },
+    {
+        "market": "GTF",
+        "tweets_mean": 0
+    },
+    {
+        "market": "HON",
+        "tweets_mean": 2
+    },
+    {
+        "market": "HSE",
+        "tweets_mean": 9
+    },
+    {
+        "market": "HSV",
+        "tweets_mean": 2
+    },
+    {
+        "market": "HTL",
+        "tweets_mean": 10
+    },
+    {
+        "market": "HTS",
+        "tweets_mean": 5
+    },
+    {
+        "market": "IAD",
+        "tweets_mean": 5
+    },
+    {
+        "market": "IAH",
+        "tweets_mean": 22
+    },
+    {
+        "market": "ICT",
+        "tweets_mean": 2
+    },
+    {
+        "market": "ICX",
+        "tweets_mean": 4
+    },
+    {
+        "market": "ILG",
+        "tweets_mean": 6
+    },
+    {
+        "market": "ILM",
+        "tweets_mean": 9
+    },
+    {
+        "market": "IND",
+        "tweets_mean": 15
+    },
+    {
+        "market": "INL",
+        "tweets_mean": 3
+    },
+    {
+        "market": "IPT",
+        "tweets_mean": 7
+    },
+    {
+        "market": "ISN",
+        "tweets_mean": 0
+    },
+    {
+        "market": "JAN",
+        "tweets_mean": 3
+    },
+    {
+        "market": "JAX",
+        "tweets_mean": 9
+    },
+    {
+        "market": "JHW",
+        "tweets_mean": 15
+    },
+    {
+        "market": "JKL",
+        "tweets_mean": 4
+    },
+    {
+        "market": "LAN",
+        "tweets_mean": 12
+    },
+    {
+        "market": "LAS",
+        "tweets_mean": 16
+    },
+    {
+        "market": "LAX",
+        "tweets_mean": 39
+    },
+    {
+        "market": "LBB",
+        "tweets_mean": 12
+    },
+    {
+        "market": "LBF",
+        "tweets_mean": 3
+    },
+    {
+        "market": "LCH",
+        "tweets_mean": 14
+    },
+    {
+        "market": "LEX",
+        "tweets_mean": 2
+    },
+    {
+        "market": "LGA",
+        "tweets_mean": 14
+    },
+    {
+        "market": "LIT",
+        "tweets_mean": 2
+    },
+    {
+        "market": "LND",
+        "tweets_mean": 2
+    },
+    {
+        "market": "LNK",
+        "tweets_mean": 2
+    },
+    {
+        "market": "LRD",
+        "tweets_mean": 22
+    },
+    {
+        "market": "LWS",
+        "tweets_mean": 4
+    },
+    {
+        "market": "LYH",
+        "tweets_mean": 5
+    },
+    {
+        "market": "MAF",
+        "tweets_mean": 12
+    },
+    {
+        "market": "MCI",
+        "tweets_mean": 2
+    },
+    {
+        "market": "MCN",
+        "tweets_mean": 5
+    },
+    {
+        "market": "MCO",
+        "tweets_mean": 13
+    },
+    {
+        "market": "MEI",
+        "tweets_mean": 2
+    },
+    {
+        "market": "MEM",
+        "tweets_mean": 2
+    },
+    {
+        "market": "MFD",
+        "tweets_mean": 11
+    },
+    {
+        "market": "MFR",
+        "tweets_mean": 24
+    },
+    {
+        "market": "MGM",
+        "tweets_mean": 8
+    },
+    {
+        "market": "MIA",
+        "tweets_mean": 13
+    },
+    {
+        "market": "MKE",
+        "tweets_mean": 8
+    },
+    {
+        "market": "MKG",
+        "tweets_mean": 10
+    },
+    {
+        "market": "MKL",
+        "tweets_mean": 2
+    },
+    {
+        "market": "MLI",
+        "tweets_mean": 6
+    },
+    {
+        "market": "MLS",
+        "tweets_mean": 0
+    },
+    {
+        "market": "MLU",
+        "tweets_mean": 3
+    },
+    {
+        "market": "MON",
+        "tweets_mean": 1
+    },
+    {
+        "market": "MSN",
+        "tweets_mean": 4
+    },
+    {
+        "market": "MSO",
+        "tweets_mean": 0
+    },
+    {
+        "market": "MSP",
+        "tweets_mean": 4
+    },
+    {
+        "market": "MSY",
+        "tweets_mean": 4
+    },
+    {
+        "market": "OFK",
+        "tweets_mean": 2
+    },
+    {
+        "market": "OKC",
+        "tweets_mean": 2
+    },
+    {
+        "market": "OLM",
+        "tweets_mean": 8
+    },
+    {
+        "market": "OMA",
+        "tweets_mean": 2
+    },
+    {
+        "market": "ORD",
+        "tweets_mean": 13
+    },
+    {
+        "market": "ORF",
+        "tweets_mean": 7
+    },
+    {
+        "market": "ORN",
+        "tweets_mean": 2
+    },
+    {
+        "market": "PBI",
+        "tweets_mean": 13
+    },
+    {
+        "market": "PDT",
+        "tweets_mean": 8
+    },
+    {
+        "market": "PDX",
+        "tweets_mean": 8
+    },
+    {
+        "market": "PHL",
+        "tweets_mean": 6
+    },
+    {
+        "market": "PHX",
+        "tweets_mean": 5
+    },
+    {
+        "market": "PIA",
+        "tweets_mean": 11
+    },
+    {
+        "market": "PIH",
+        "tweets_mean": 2
+    },
+    {
+        "market": "PIR",
+        "tweets_mean": 1
+    },
+    {
+        "market": "PIT",
+        "tweets_mean": 6
+    },
+    {
+        "market": "PNS",
+        "tweets_mean": 8
+    },
+    {
+        "market": "PRC",
+        "tweets_mean": 22
+    },
+    {
+        "market": "PUB",
+        "tweets_mean": 2
+    },
+    {
+        "market": "PUC",
+        "tweets_mean": 3
+    },
+    {
+        "market": "PVD",
+        "tweets_mean": 2
+    },
+    {
+        "market": "PWM",
+        "tweets_mean": 1
+    },
+    {
+        "market": "RAP",
+        "tweets_mean": 1
+    },
+    {
+        "market": "RDD",
+        "tweets_mean": 17
+    },
+    {
+        "market": "RDU",
+        "tweets_mean": 7
+    },
+    {
+        "market": "RFD",
+        "tweets_mean": 8
+    },
+    {
+        "market": "RIC",
+        "tweets_mean": 7
+    },
+    {
+        "market": "RNO",
+        "tweets_mean": 17
+    },
+    {
+        "market": "ROA",
+        "tweets_mean": 3
+    },
+    {
+        "market": "ROC",
+        "tweets_mean": 23
+    },
+    {
+        "market": "ROW",
+        "tweets_mean": 12
+    },
+    {
+        "market": "RST",
+        "tweets_mean": 3
+    },
+    {
+        "market": "SAC",
+        "tweets_mean": 39
+    },
+    {
+        "market": "SAF",
+        "tweets_mean": 1
+    },
+    {
+        "market": "SAN",
+        "tweets_mean": 39
+    },
+    {
+        "market": "SAT",
+        "tweets_mean": 22
+    },
+    {
+        "market": "SAV",
+        "tweets_mean": 4
+    },
+    {
+        "market": "SBA",
+        "tweets_mean": 39
+    },
+    {
+        "market": "SBN",
+        "tweets_mean": 12
+    },
+    {
+        "market": "SDF",
+        "tweets_mean": 8
+    },
+    {
+        "market": "SEA",
+        "tweets_mean": 8
+    },
+    {
+        "market": "SFO",
+        "tweets_mean": 39
+    },
+    {
+        "market": "SGF",
+        "tweets_mean": 2
+    },
+    {
+        "market": "SHR",
+        "tweets_mean": 0
+    },
+    {
+        "market": "SHV",
+        "tweets_mean": 8
+    },
+    {
+        "market": "SJT",
+        "tweets_mean": 22
+    },
+    {
+        "market": "SLC",
+        "tweets_mean": 2
+    },
+    {
+        "market": "SLE",
+        "tweets_mean": 8
+    },
+    {
+        "market": "SPI",
+        "tweets_mean": 11
+    },
+    {
+        "market": "SPS",
+        "tweets_mean": 12
+    },
+    {
+        "market": "STC",
+        "tweets_mean": 4
+    },
+    {
+        "market": "STL",
+        "tweets_mean": 6
+    },
+    {
+        "market": "SUX",
+        "tweets_mean": 1
+    },
+    {
+        "market": "SVC",
+        "tweets_mean": 3
+    },
+    {
+        "market": "SYR",
+        "tweets_mean": 23
+    },
+    {
+        "market": "TLH",
+        "tweets_mean": 7
+    },
+    {
+        "market": "TOL",
+        "tweets_mean": 10
+    },
+    {
+        "market": "TOP",
+        "tweets_mean": 2
+    },
+    {
+        "market": "TPA",
+        "tweets_mean": 13
+    },
+    {
+        "market": "TRI",
+        "tweets_mean": 4
+    },
+    {
+        "market": "TUL",
+        "tweets_mean": 2
+    },
+    {
+        "market": "TUP",
+        "tweets_mean": 2
+    },
+    {
+        "market": "TUS",
+        "tweets_mean": 5
+    },
+    {
+        "market": "TVC",
+        "tweets_mean": 10
+    },
+    {
+        "market": "TYS",
+        "tweets_mean": 5
+    },
+    {
+        "market": "UIN",
+        "tweets_mean": 6
+    },
+    {
+        "market": "VCT",
+        "tweets_mean": 22
+    },
+    {
+        "market": "VTN",
+        "tweets_mean": 2
+    },
+    {
+        "market": "WMC",
+        "tweets_mean": 5
+    },
+    {
+        "market": "YKM",
+        "tweets_mean": 8
+    },
+    {
+        "market": "YNG",
+        "tweets_mean": 9
+    },
+    {
+        "market": "YUM",
+        "tweets_mean": 22
+    }
+]

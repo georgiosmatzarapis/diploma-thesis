@@ -1,0 +1,291 @@
+{% if session.get('first_login') %}
+    {% extends "snippets/layouts/layout_first_login.html" %}
+{% else %}
+    {% extends "snippets/layouts/layout_general.html" %}
+{% endif %}
+
+{% block links %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/allergy_settings_pages.css') }}">
+{% endblock links %}
+
+
+{% block content %}
+
+{% if session.get('first_login') %}
+<div class="alert alert-info" role="alert">
+    <p><b><u>Instructions Note:</u></b></p>
+    <ul>
+        <li>As your first sign-in to our allergy track platform, you have to fill out all the following forms.</li>
+        <li>Complete with the sequence provided to you and do not forget any necessary field.</li>
+        <li>If you do not have enought time for this, <a href="{{url_for('users.logout')}}" class="alert-link">sign-out</a> and try another time.</li>
+    </ul>
+</div>
+{% endif %}
+
+<div class="content_allergies">
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            {{ immunotherapy_form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4" style="color: #043a6d;"><b>Allergy Data</b></legend>
+
+                <div class="form-group">
+                    <b>{{ form.gender.label(class="form-control-label") }}</b> <br>
+                    {% if form.gender.errors %}
+                        <div class="is-invalid">
+                            {% for subfield in form.gender %}
+                                <tr>
+                                    <td>{{ subfield }}</td>
+                                    <td>{{ subfield.label }}</td>
+                                </tr>
+                            {% endfor %}
+                        </div>
+                        <div class="invalid-feedback">
+                            {% for error in form.gender.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {% for subfield in form.gender %}
+                            <tr>
+                                <td>{{ subfield }}</td>
+                                <td>{{ subfield.label }}</td>
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                <div class="form-field">
+                    <b>{{ form.family_history.label(class="form-control-label") }}</b> <br>
+                    {% if form.family_history.errors %}
+                        <div class="is-invalid">
+                            {{form.family_history(class="browser-default custom-select")}}
+                        </div>
+                        <div class="invalid-feedback">
+                            {% for error in form.family_history.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{form.family_history(class="browser-default custom-select")}}
+                    {% endif %}
+                </div><br>
+
+                <div class="form-group">
+                    <b>{{ form.allergic_rhinitis.label(class="form-control-label") }}</b> <br>
+                    {% if form.allergic_rhinitis.errors %}
+                        <div class="is-invalid">
+                            {% for subfield in form.allergic_rhinitis %}
+                                <tr>
+                                    <td>{{ subfield }}</td>
+                                    <td>{{ subfield.label }}</td>
+                                </tr>
+                            {% endfor %}
+                        </div>
+                        <div class="invalid-feedback">
+                            {% for error in form.allergic_rhinitis.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {% for subfield in form.allergic_rhinitis %}
+                            <tr>
+                                <td>{{ subfield }}</td>
+                                <td>{{ subfield.label }}</td>
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    <b>{{ form.allergic_asthma.label(class="form-control-label") }}</b> <br>
+                    {% if form.allergic_asthma.errors %}
+                        <div class="is-invalid">
+                            {% for subfield in form.allergic_asthma %}
+                                <tr>
+                                    <td>{{ subfield }}</td>
+                                    <td>{{ subfield.label }}</td>
+                                </tr>
+                            {% endfor %}
+                        </div>
+                        <div class="invalid-feedback">
+                            {% for error in form.allergic_asthma.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {% for subfield in form.allergic_asthma %}
+                            <tr>
+                                <td>{{ subfield }}</td>
+                                <td>{{ subfield.label }}</td>
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    <b>{{ form.allergic_conjunctivitis.label(class="form-control-label") }}</b> <br>
+                    {% if form.allergic_conjunctivitis.errors %}
+                        <div class="is-invalid">
+                            {% for subfield in form.allergic_conjunctivitis %}
+                                <tr>
+                                    <td>{{ subfield }}</td>
+                                    <td>{{ subfield.label }}</td>
+                                </tr>
+                            {% endfor %}
+                        </div>
+                        <div class="invalid-feedback">
+                            {% for error in form.allergic_conjunctivitis.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {% for subfield in form.allergic_conjunctivitis %}
+                            <tr>
+                                <td>{{ subfield }}</td>
+                                <td>{{ subfield.label }}</td>
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    <b>{{ form.allergy_frequency.label(class="form-control-label") }}</b> <br>
+                    {% if form.allergy_frequency.errors %}
+                        <div class="is-invalid">
+                            {% for subfield in form.allergy_frequency %}
+                                <tr>
+                                    <td>{{ subfield }}</td>
+                                    <td>{{ subfield.label }}</td>
+                                </tr>
+                            {% endfor %}
+                        </div>
+                        <div class="invalid-feedback">
+                            {% for error in form.allergy_frequency.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {% for subfield in form.allergy_frequency %}
+                            <tr>
+                                <td>{{ subfield }}</td>
+                                <td>{{ subfield.label }}</td>
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    <b>{{ form.allergy_affection.label(class="form-control-label") }}</b> <br>
+                    {% if form.allergy_affection.errors %}
+                        <div class="is-invalid">
+                            {% for choice in form.allergy_affection %}
+                                <div class="form-check">
+                                    {{ choice(class="form-check-input") }}
+                                    {{ choice.label(class="form-check-label") }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="invalid-feedback">
+                            {% for error in form.allergy_affection.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {% for choice in form.allergy_affection %}
+                            <div class="form-check">
+                                {{ choice(class="form-check-input") }}
+                                {{ choice.label(class="form-check-label") }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                <div class="form-field">
+                    <b>{{ form.immunotherapy.label(class="form-control-label") }}</b> <br>
+                    {% if form.immunotherapy.errors %}
+                        <div class="is-invalid">
+                            {{form.immunotherapy(class="browser-default custom-select", id="immunotherapy_form")}}
+                        </div>
+                        <div class="invalid-feedback">
+                            {% for error in form.immunotherapy.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{form.immunotherapy(class="browser-default custom-select", id="immunotherapy_form")}}
+                    {% endif %}
+                </div><br>
+
+                <div class="form-group" id ="immunotherapy_start_date_hide">
+                <b>{{ immunotherapy_form.immunotherapy_start_date.label(class="form-control-label") }}</b><br>
+                    {{ immunotherapy_form.immunotherapy_start_date(class="form-control form-control-bg", id='reset_form') }}
+                </div>
+
+                <div class="form-field">
+                    <b>{{ form.medicine_days.label(class="form-control-label") }}</b> <br>
+                    {% if form.medicine_days.errors %}
+                        <div class="is-invalid">
+                            {{form.medicine_days(class="browser-default custom-select")}}
+                        </div>
+                        <div class="invalid-feedback">
+                            {% for error in form.medicine_days.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{form.medicine_days(class="browser-default custom-select")}}
+                    {% endif %}
+                </div><br>
+
+                <div class="form-field">
+                    <b>{{ form.medicine_weeks.label(class="form-control-label") }}</b> <br>
+                    {% if form.medicine_weeks.errors %}
+                        <div class="is-invalid">
+                            {{form.medicine_weeks(class="browser-default custom-select")}}
+                        </div>
+                        <div class="invalid-feedback">
+                            {% for error in form.medicine_weeks.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{form.medicine_weeks(class="browser-default custom-select")}}
+                    {% endif %}
+                </div><br>
+
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+</div><br>
+{% endblock content %}
+
+
+{% block logged_in_user %}
+<p class="article_column"><i class="far fa-newspaper"></i>&nbsp;Related Articles</p>
+<br>
+<div class="card card-cascade">
+
+    <div class="view view-cascade overlay">
+        <img src="{{ url_for('static', filename='icons/allergy_settings/allergy_prevent.jpg') }}" class="card-img-top" alt="icon">
+    </div>
+
+    <div class="card-body card-body-cascade text-center">
+        <h5 class="card-title">Allergy Prevention</h5>
+        <p class="card-text">
+            What we can do to prevent allergic reactions and control allergies?.<br><br>
+            <a class="article_link" target="_blank" role="link" href="https://www.aafa.org/prevent-allergies/">Take a look</a>
+        </p>
+    </div>
+
+</div><br>
+{% endblock logged_in_user %}
+
+
+{% block extra_scripts_logged_in %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/allergy_data/hide_div.js') }}"></script>
+{% endblock extra_scripts_logged_in %}

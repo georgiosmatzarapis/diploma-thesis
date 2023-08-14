@@ -1,0 +1,910 @@
+{% extends "snippets/layouts/layout_general.html" %}
+
+{% block links %}
+<!-- Leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+<!-- Spin -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/third_party/spin.css') }}">
+<!-- Title font -->
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+
+<!-- Custom -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock links %}
+
+{% block modal_header %}
+<!-- MODAL FOR HIGH SYMPTOMS -->
+<div class="modal fade" id="high_symptoms_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1"
+    aria-hidden="true">
+    <div class="modal-dialog modal-side modal-top-right" role="document">
+        <div class="modal-content">
+            <div class="alert alert-danger" role="alert">
+                <h5 class="modal-title" id="exampleModalLabel1">
+                    <i class='fas fa-heartbeat'></i>
+                    <b>High Symptoms Submitted!</b>
+                </h5>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>
+                        Please check <a href="{{url_for('main.myhealth')}}" class="alert-link"
+                            id="link_myhealth">myHealth</a> to get
+                        informed about your allergy.
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL FOR NO LOCATION ACCESS REMINDER -->
+<div class="modal" tabindex="-1" role="dialog" id="cookie_modal">
+    <div class="modal-dialog modal-side modal-top-right" role="document">
+        <div class="modal-content">
+            <div class="alert alert-warning" role="alert">
+                <h5 class="modal-title" id="cookie_modal">
+                    <i class='fas fa-map-marker-alt'></i>
+                    <b>Reminder:</b>
+                </h5>
+            </div>
+
+            <div class="modal-body">
+                <p>Location access is blocked!<br>Use browser settings to allow access.</p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock modal_header%}
+
+
+<!-- MAIN SECTION -->
+{% block content %}
+
+<input type="hidden" id="leaflet_map_tile" value="{{leaflet_map_tile}}">
+<!-- TODO BUTTON SPINNER loader. CHECK BOOKMARKS -->
+<!-- Title -->
+<div class="content_others">
+
+    <div class='home_title'>
+        <i class='fas fa-map-marked-alt' id="title_symbol"></i>&nbsp;Allergy Map U.S.
+    </div>
+
+    <!-- REMINDER (message about completion of vas form) -->
+    <br>
+    {% if session.get('logged_in') %}
+        <div id="warningAlert" class="alert alert-secondary" role="alert" style="display:none;">
+            <strong style="font-weight: bold;"><i class="far fa-bell"></i>&nbsp;Reminder:</strong> Complete your daily symptoms.
+        </div>
+    {% endif %}
+
+
+    <!-- ============================================= SENSORS MAP ============================================= -->
+    <p id="info_text1"><span style="color: #00b7ff;">Pollen</span> maps - Allergens search:
+
+        <!-- Allergy search -->
+        <button type="button" class="btn btn-outline-default waves-effect btn-sm" data-toggle="modal" data-target="#fullHeightModalRight1">
+            <i class="fas fa-tasks"></i>&nbsp;&nbsp;CHOOCE
+        </button>
+        <button type="button" class="btn btn-outline-secondary waves-effect btn-sm" id="submit_allergy_search1">
+            <i class="fas fa-check"></i>&nbsp;&nbsp;SUBMIT
+        </button>
+    </p>
+    <!-- Forecast button -->
+    <div id="forecast">
+        <p id="info_text2"> Click
+            <!-- Forecast button -->
+            <button type="button" style="padding: 6px 14px;" class="btn purple-gradient btn-sm curved_edge_button" id="forecast_button">
+                <i class="fas fa-mouse"></i>&nbsp;&nbsp;Tomorrow Forecast
+            </button>to get pollen values for tomorrow !
+        </p>
+    </div>
+
+    <!-- Today button -->
+    <div id="today" style="display:none;">
+        <p id="info_text2"> Back to
+            <!-- Forecast button -->
+            <button type="button" style="padding: 6px 14px;" class="btn aqua-gradient btn-sm curved_edge_button" id="today_button">
+                <i class="fas fa-mouse"></i>&nbsp;&nbsp;TODAY
+            </button> !
+        </p>
+    </div>
+
+    <!-- ALERT - Forgotten time interval -->
+    <div id="time_alert1" class="alert alert-warning" role="alert" style="display:none;">
+        <strong style="font-weight: bold;"><i class="fas fa-exclamation-circle"></i>&nbsp;Oops!</strong>&nbsp;Time interval it is not selected.
+    </div>
+    
+    <!-- MODAL FOR MAP CHOICES -->
+    <div class="modal fade top" id="fullHeightModalRight1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+
+        <div class="modal-dialog modal-full-height modal-top" role="document">
+            <div class="modal-content">
+
+                <div class="alert alert-info" style="background-color: #5fbfe6;" role="alert">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title" style="color: azure;" id="myModalLabel1">
+                        Select your allergy-search preferences&nbsp;
+                        <i class="far fa-hand-pointer"></i>
+                    </h5>
+                </div>
+
+                <div class="modal-body">
+
+                    <form method="POST" action="">
+                        {{ sensor_map_form.hidden_tag() }}
+
+                        <div class="form-field">
+                            <strong style="font-weight: bold;">
+                                <i class='far fa-clock'></i>
+                                {{ sensor_map_form.selected_time.label(class="form-control-label") }}
+                            </strong>
+                            {{sensor_map_form.selected_time(class="browser-default custom-select", id="time_picker1")}}
+                        </div>
+                        <small id="time_reminder1" style="font-style: italic; color: #ff0000;">*Field is required.</small>
+                        <br><br>
+
+                        <div class="form-group">
+                            <strong style="font-weight: bold;">
+                                <i class="fab fa-pagelines"></i>
+                                {{ sensor_map_form.allergens_1.label(class="form-control-label") }}<br>
+                            </strong>
+
+                            <div id="sensor_map_allergens">
+                                <div class="row">
+                                    {% for choice in sensor_map_form.allergens_1 %}
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            {{ choice(class="form-check-input") }}
+                                            {{ choice.label(class="form-check-label") }}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    {% for choice in sensor_map_form.allergens_2 %}
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            {{ choice(class="form-check-input") }}
+                                            {{ choice.label(class="form-check-label") }}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    {% for choice in sensor_map_form.allergens_3 %}
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            {{ choice(class="form-check-input") }}
+                                            {{ choice.label(class="form-check-label") }}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <small style="font-style: italic;">*Do not forget to submit after saving above form.</small>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-info waves-effect curved_edge_button" id="clear_chooce1" data-dismiss="modal">Clear</button>
+                    <button type="button" class="btn blue-gradient curved_edge_button" data-dismiss="modal">Ready</button>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Maps -->
+    <div class="card border-primary mb-3">
+        <div id="main_lmap1"></div>
+        <br>
+        <div id="main_gmap1"></div>
+    </div>
+    <div class="inf-content1">
+    </div><br><br>
+    <!-- =========================================================================================================== -->
+
+
+    <!-- ================================================== VAS MAP ================================================= -->
+    <p id="info_text1" style="margin-bottom: 1rem;"><span style="color: rgb(223, 27, 92);">V.A.S.</span> maps - Allergens search:
+        <!-- Allergy search -->
+        <button type="button" class="btn btn-outline-default waves-effect btn-sm" data-toggle="modal" data-target="#fullHeightModalRight2">
+            <i class="fas fa-tasks"></i>&nbsp;&nbsp;CHOOCE
+        </button>
+        <button type="button" class="btn btn-outline-secondary waves-effect btn-sm" id="submit_allergy_search2">
+            <i class="fas fa-check"></i>&nbsp;&nbsp;SUBMIT
+        </button>
+    </p>
+
+    <!-- ALERT - Forgotten time interval -->
+    <div id="time_alert2" class="alert alert-warning" role="alert" style="display:none;">
+        <strong style="font-weight: bold;"><i class="fas fa-exclamation-circle"></i>&nbsp;Oops!</strong>&nbsp;Time interval it is not selected.
+    </div>
+
+    <!-- MODAL FOR MAP CHOICES -->
+    <div class="modal fade top" id="fullHeightModalRight2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+
+        <div class="modal-dialog modal-full-height modal-top" role="document">
+            <div class="modal-content">
+
+                <div class="alert alert-info" style="background-color: rgb(230, 118, 155);" role="alert">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title" style="color: azure;" id="myModalLabel2">
+                        Select your allergy-search preferences&nbsp;
+                        <i class="far fa-hand-pointer"></i>
+                    </h5>
+                </div>
+
+                <div class="modal-body">
+
+                    <form method="POST" action="">
+                        {{ vas_map_form.hidden_tag() }}
+
+                        <div class="form-field">
+                            <strong style="font-weight: bold;">
+                                <i class='far fa-clock'></i>
+                                {{ vas_map_form.selected_time.label(class="form-control-label") }}
+                            </strong>
+                            {{vas_map_form.selected_time(class="browser-default custom-select", id="time_picker2")}}
+                        </div>
+
+                        <small id="time_reminder2" style="font-style: italic; color: #ff0000;">*Field is required.</small>
+                        <br><br>
+
+                        <div class="form-group">
+                            <strong style="font-weight: bold;">
+                                <i class="fab fa-pagelines"></i>
+                                {{ vas_map_form.allergens_1.label(class="form-control-label") }}<br>
+                            </strong>
+
+                            <div id="mcs_map_allergens">
+                                <div class="row">
+                                    {% for choice in vas_map_form.allergens_1 %}
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            {{ choice(class="form-check-input") }}
+                                            {{ choice.label(class="form-check-label") }}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    {% for choice in vas_map_form.allergens_2 %}
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            {{ choice(class="form-check-input") }}
+                                            {{ choice.label(class="form-check-label") }}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    {% for choice in vas_map_form.allergens_3 %}
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            {{ choice(class="form-check-input") }}
+                                            {{ choice.label(class="form-check-label") }}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <small style="font-style: italic;">*Do not forget to submit after saving above form.</small>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary waves-effect curved_edge_button" id="clear_chooce2" data-dismiss="modal">Clear</button>
+                    <button type="button" class="btn purple-gradient curved_edge_button" data-dismiss="modal">Ready</button>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Maps -->
+    <div class="card border-danger mb-3">
+        <div id="main_lmap2"></div>
+        <br>
+        <div id="main_gmap2"></div>
+    </div>
+    <div class="inf-content2">
+    </div><br><br>
+    <!-- ============================================================================================================== -->
+
+
+    <!-- ================================================== TWITTER MAP ================================================ -->
+    <p id="info_text1" style="text-align: center;"><span style="color: rgb(29,161,242);"><i class="fab fa-twitter"></i>&nbsp;Twitter allergy</span> map</p>
+
+    <div class="alert alert-primary" role="alert" style="padding: 6px;">
+        <form method="POST" action="">
+            {{ twitter_map_form.hidden_tag() }}
+            <div class="form-field">
+                <strong style="font-weight: bold;">
+                    <i class='far fa-clock'></i>
+                    {{ twitter_map_form.selected_time.label(class="form-control-label") }}
+                </strong>
+                {{twitter_map_form.selected_time(class="browser-default custom-select", id="twitter_time_picker")}}
+            </div>
+        </form>
+    </div>
+
+    <!-- Map -->
+    <div class="card border-info mb-3">
+        <div id="twitter_lmap"></div>
+    </div>
+    <div class="inf-content5">
+    </div><br><br>
+    <!-- ============================================================================================================== -->
+
+
+    <!-- ================================================== HYBRID CROWDSOURCING MAP ================================================= -->
+    <p id="info_text1" style="margin-bottom: 1rem;"><span style="color: rgb(223, 154, 27);">Hybrid Crowdsourcing</span> maps - Allergens search:
+        <!-- Allergy search -->
+        <button type="button" class="btn btn-outline-default waves-effect btn-sm" data-toggle="modal" data-target="#fullHeightModalRight3">
+            <i class="fas fa-tasks"></i>&nbsp;&nbsp;CHOOCE
+        </button>
+        <button type="button" class="btn btn-outline-secondary waves-effect btn-sm" id="submit_allergy_search3">
+            <i class="fas fa-check"></i>&nbsp;&nbsp;SUBMIT
+        </button>
+    </p>
+
+    <!-- ALERT - Forgotten time interval -->
+    <div id="time_alert3" class="alert alert-warning" role="alert" style="display:none;">
+        <strong style="font-weight: bold;"><i class="fas fa-exclamation-circle"></i>&nbsp;Oops!</strong>&nbsp;Time interval it is not selected.
+    </div>
+
+    <!-- MODAL FOR MAP CHOICES -->
+    <div class="modal fade top" id="fullHeightModalRight3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+
+        <div class="modal-dialog modal-full-height modal-top" role="document">
+            <div class="modal-content">
+
+                <div class="alert alert-info" style="background-color: rgb(230, 175, 73);" role="alert">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title" style="color: azure;" id="myModalLabel3">
+                        Select your allergy-search preferences&nbsp;
+                        <i class="far fa-hand-pointer"></i>
+                    </h5>
+                </div>
+
+                <div class="modal-body">
+
+                    <form method="POST" action="">
+                        {{ hybrid_mcs_map_form.hidden_tag() }}
+
+                        <div class="form-field">
+                            <strong style="font-weight: bold;">
+                                <i class='far fa-clock'></i>
+                                {{ hybrid_mcs_map_form.selected_time.label(class="form-control-label") }}
+                            </strong>
+                            {{hybrid_mcs_map_form.selected_time(class="browser-default custom-select", id="time_picker3")}}
+                        </div>
+
+                        <small id="time_reminder3" style="font-style: italic; color: #ff0000;">*Field is required.</small>
+                        <br><br>
+
+                        <div class="form-group">
+                            <strong style="font-weight: bold;">
+                                <i class="fab fa-pagelines"></i>
+                                {{ hybrid_mcs_map_form.allergens_1.label(class="form-control-label") }}<br>
+                            </strong>
+
+                            <div id="hybrid_mcs_map_allergens">
+                                <div class="row">
+                                    {% for choice in hybrid_mcs_map_form.allergens_1 %}
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            {{ choice(class="form-check-input") }}
+                                            {{ choice.label(class="form-check-label") }}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    {% for choice in hybrid_mcs_map_form.allergens_2 %}
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            {{ choice(class="form-check-input") }}
+                                            {{ choice.label(class="form-check-label") }}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    {% for choice in hybrid_mcs_map_form.allergens_3 %}
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            {{ choice(class="form-check-input") }}
+                                            {{ choice.label(class="form-check-label") }}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <small style="font-style: italic;">*Do not forget to submit after saving above form.</small>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-warning waves-effect curved_edge_button" id="clear_chooce3" data-dismiss="modal">Clear</button>
+                    <button type="button" class="btn peach-gradient curved_edge_button" data-dismiss="modal">Ready</button>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Maps -->
+    <div class="card border-warning mb-3">
+        <div id="main_lmap3"></div>
+    </div>
+    <div class="inf-content3">
+    </div>
+    <br>
+    <!-- =============================================================================================================== -->
+
+
+    <!-- ================================================== HYBRID MAP ================================================= -->
+    <p id="info_text1" style="margin-bottom: 1rem;"><span style="color: rgb(42, 207, 111);">Hybrid</span> maps - Allergens search:
+        <!-- Allergy search -->
+        <button type="button" class="btn btn-outline-default waves-effect btn-sm" data-toggle="modal" data-target="#fullHeightModalRight4">
+            <i class="fas fa-tasks"></i>&nbsp;&nbsp;CHOOCE
+        </button>
+        <button type="button" class="btn btn-outline-secondary waves-effect btn-sm" id="submit_allergy_search4">
+            <i class="fas fa-check"></i>&nbsp;&nbsp;SUBMIT
+        </button>
+    </p>
+
+    <!-- ALERT - Forgotten time interval -->
+    <div id="time_alert4" class="alert alert-warning" role="alert" style="display:none;">
+        <strong style="font-weight: bold;"><i class="fas fa-exclamation-circle"></i>&nbsp;Oops!</strong>&nbsp;Time interval it is not selected.
+    </div>
+
+    <!-- MODAL FOR MAP CHOICES -->
+    <div class="modal fade top" id="fullHeightModalRight4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" aria-hidden="true">
+
+        <div class="modal-dialog modal-full-height modal-top" role="document">
+            <div class="modal-content">
+
+                <div class="alert alert-info" style="background-color: rgb(42, 207, 111);" role="alert">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title" style="color: azure;" id="myModalLabel4">
+                        Select your allergy-search preferences&nbsp;
+                        <i class="far fa-hand-pointer"></i>
+                    </h5>
+                </div>
+
+                <div class="modal-body">
+
+                    <form method="POST" action="">
+                        {{ hybrid_map_form.hidden_tag() }}
+
+                        <div class="form-field">
+                            <strong style="font-weight: bold;">
+                                <i class='far fa-clock'></i>
+                                {{ hybrid_map_form.selected_time.label(class="form-control-label") }}
+                            </strong>
+                            {{hybrid_map_form.selected_time(class="browser-default custom-select", id="time_picker4")}}
+                        </div>
+
+                        <small id="time_reminder4" style="font-style: italic; color: #ff0000;">*Field is required.</small>
+                        <br><br>
+
+                        <div class="form-group">
+                            <strong style="font-weight: bold;">
+                                <i class="fab fa-pagelines"></i>
+                                {{ hybrid_map_form.allergens_1.label(class="form-control-label") }}<br>
+                            </strong>
+
+                            <div id="hybrid_map_allergens">
+                                <div class="row">
+                                    {% for choice in hybrid_map_form.allergens_1 %}
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            {{ choice(class="form-check-input") }}
+                                            {{ choice.label(class="form-check-label") }}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    {% for choice in hybrid_map_form.allergens_2 %}
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            {{ choice(class="form-check-input") }}
+                                            {{ choice.label(class="form-check-label") }}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    {% for choice in hybrid_map_form.allergens_3 %}
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            {{ choice(class="form-check-input") }}
+                                            {{ choice.label(class="form-check-label") }}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <small style="font-style: italic;">*Do not forget to submit after saving above form.</small>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary waves-effect curved_edge_button" id="clear_chooce4" data-dismiss="modal">Clear</button>
+                    <button type="button" class="btn aqua-gradient curved_edge_button" data-dismiss="modal">Ready</button>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Maps -->
+    <div class="card border-success mb-3">
+        <div id="main_lmap4"></div>
+    </div>
+    <div class="inf-content6">
+    </div>
+    <div class="divider div-transparent"></div>
+    <br>
+    <!-- ================================================================================================================ -->
+    
+    
+
+    <!-- ================================================== HUMIDITY MAP ================================================ -->
+    <div class="wrapper">
+        <img src="{{ url_for('static', filename='icons/home/humidity1.png') }}" alt="Humidity icon" style="width:29px;height:29px;">
+        <p id="info_text3" style="text-align: center; color: #043a6d;">&nbsp;Humidity Map</p>
+    </div>
+
+    <div class="alert alert-info" role="alert" style="padding: 6px;">
+        <form method="POST" action="">
+            {{ humidity_map_form.hidden_tag() }}
+            <div class="form-field">
+                <strong style="font-weight: bold;">
+                    <i class='far fa-clock'></i>
+                    {{ humidity_map_form.selected_time.label(class="form-control-label") }}
+                </strong>
+                {{humidity_map_form.selected_time(class="browser-default custom-select", id="humidity_time_picker")}}
+            </div>
+        </form>
+    </div>
+
+    <!-- Forecast button -->
+    <div id="forecast2">
+        <p id="info_text2" style="font-style: italic;"> Check also
+            <!-- Forecast button -->
+            <button type="button" style="padding: 6px 14px;" class="btn blue-gradient btn-sm curved_edge_button" id="humidity_forecast">
+                <i class="fas fa-mouse"></i>&nbsp;&nbsp;Tomorrow Forecast
+            </button> to get humidity values for tomorrow.
+        </p>
+    </div>
+    <!-- Today button -->
+    <div id="today2" style="display:none;">
+        <p id="info_text2"> Back to
+            <!-- Forecast button -->
+            <button type="button" style="padding: 6px 14px;" class="btn aqua-gradient btn-sm curved_edge_button" id="humidity_today">
+                <i class="fas fa-mouse"></i>&nbsp;&nbsp;TODAY
+            </button>
+        </p>
+    </div>
+
+    <div class="card border-dark mb-3">
+        <div id="humidity_lmap"></div>
+    </div><br>
+    <!-- <div class="inf-content4">
+        <div id="humidity_lmap"></div>
+        <div id="humidity_gmap"></div>
+    </div><br><br> -->
+
+    <p id="info_text2" style="padding-bottom: 0.5rem; font-size: 21px;">
+        Below you can see the distribution of all the humidity points which are provided from the
+        <a href="https://openweathermap.org/api" style="color: #043a6d;" target="_blank">OpenWeatherMap API</a>
+        and we are also working with them.
+    </p>
+
+    <!-- Photo Gallery -->
+    <div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-2" data-slide-to="1"></li>
+            <li data-target="#carousel-example-2" data-slide-to="2"></li>
+            <li data-target="#carousel-example-2" data-slide-to="3"></li>
+            <li data-target="#carousel-example-2" data-slide-to="4"></li>
+        </ol>
+        <!--/.Indicators-->
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <div class="view">
+                    <img src="{{ url_for('static', filename='icons/home/humidity_gmap1.png') }}" class="img-fluid" alt="humidity1 image">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="view">
+                    <img src="{{ url_for('static', filename='icons/home/humidity_gmap2.png') }}" class="img-fluid" alt="humidity2 image"> 
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="view">
+                    <img src="{{ url_for('static', filename='icons/home/humidity_gmap3.png') }}" class="img-fluid" alt="humidity3 image"> 
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="view">
+                    <img src="{{ url_for('static', filename='icons/home/humidity_gmap4.png') }}" class="img-fluid" alt="humidity4 image"> 
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="view">
+                    <img src="{{ url_for('static', filename='icons/home/humidity_gmap5.png') }}" class="img-fluid" alt="humidity5 image"> 
+                </div>
+            </div>
+        </div>
+        <!--/.Slides-->
+        <!--Controls-->
+        <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        <!--/.Controls-->
+    </div><br>    
+       
+    <!-- ================================================================================================================ -->
+</div>
+{% endblock content %}
+<!-- End Main Section -->
+
+
+
+<!-- SIDEBAR -->
+{% block logged_in_user %}
+<br>
+<div class="alert alert-primary" role="alert">
+    <i class='fas fa-leaf'></i>&nbsp;&nbsp;Welcome <b>{{ session.get('username') }}</b>!
+</div>
+
+<!-- FORM (vas form) -->
+<div class="content-section">
+    <form method="POST" id="vas_form_submition" action="">
+        {{ vas_form.hidden_tag() }}
+        <fieldset class="form-group">
+            <h5 id="sidebar_header" style="margin: 5px 0;" class="border-bottom mb-4">Complete your daily symptoms</h5>
+
+            <div class="slidecontainer">
+                <b>{{ vas_form.today_symptoms.label(class="form-control-label") }}</b> <br>
+                {{ vas_form.today_symptoms(type="range", class="slider", min="0", max="12", step="1") }}
+                <p class="left">Low</p>
+                <p class="right">High</p>
+            </div><br><br>
+
+            <div class="slidecontainer">
+                <b>{{ vas_form.rhinitis_symptoms_today.label(class="form-control-label") }}</b> <br>
+                {{ vas_form.rhinitis_symptoms_today(type="range", class="slider", min="0", max="12", step="1") }}
+                <p class="left">Low</p>
+                <p class="right">High</p>
+            </div><br><br>
+
+            <div class="slidecontainer">
+                <b>{{ vas_form.asthma_symptoms_today.label(class="form-control-label") }}</b> <br>
+                {{ vas_form.asthma_symptoms_today(type="range", class="slider", min="0", max="12", step="1") }}
+                <p class="left">Low</p>
+                <p class="right">High</p>
+            </div><br><br>
+
+            <div class="slidecontainer">
+                <b>{{ vas_form.conjunctivitis_symptoms_today.label(class="form-control-label") }}</b> <br>
+                {{ vas_form.conjunctivitis_symptoms_today(type="range", class="slider", min="0", max="12", step="1") }}
+                <p class="left">Low</p>
+                <p class="right">High</p>
+            </div><br><br>
+
+            <div class="form-field">
+                <b>{{ vas_form.work_school_today.label(class="form-control-label") }}</b> <br>
+                {{vas_form.work_school_today(class="browser-default custom-select", id="work_school_form")}}
+            </div><br>
+
+            <div class="slidecontainer" id="work_school_today_hide">
+                <b>{{ vas_form.work_affection.label(class="form-control-label") }}</b> <br>
+                {{ vas_form.work_affection(type="range", class="slider", min="0", max="12", step="1") }}
+                <p class="left">Low</p>
+                <p class="right">High</p>
+            </div><br><br>
+            <!-- ------------ -->
+
+            <div id="location_loader"></div><br>
+        </fieldset>
+
+        <button type="button" class="btn blue-gradient curved_edge_button" id="id_submit" data-toggle="modal">
+            Submit Symptoms
+        </button>
+    </form>
+</div>
+<!-- end form -->
+
+<!-- MODAL - LOCATION VALIDATION -->
+<div id="vas_location" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="alert alert-info" role="alert">
+                <h5 class="modal-title" id="exampleModalLabel1">
+                    <i class="fas fa-globe-americas"></i>
+                    <b style="font-style: italic;">Is this your location ?</b>
+                </h5>
+            </div>
+            <div class="modal-body">
+                <!-- MINI-MAP SECTION -->
+                <div id="mini_gmap"></div>
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="fail_location" class="btn btn-default waves-effect waves-light curved_edge_button" 
+                    data-toggle="popover" title="" data-content="Drag the marker to your area and click 'Yes'."
+                   data-original-title="Chooce your location"  data-placement="bottom">
+                   No
+                </button>
+                <button type="button" id="success_location" class="btn btn-primary waves-effect waves-light curved_edge_button" data-dismiss="modal">
+                    Yes
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Success submit message -->
+<div id="successAlert" class="alert alert-success" role="alert" style="display:none;">
+    Your daily symptoms are up to date. Check also <a href="{{url_for('main.myhealth')}}"
+        class="alert-link">myHealth</a> to track your health progress.
+</div>
+
+<!-- NOTE (privacy note) -->
+<div class="alert alert-secondary" role="alert">
+
+    <p>
+        <i class='fas fa-thumbtack'></i>
+        <b>Note:</b>
+        <small>We respect your privacy and your data are used for site's requirements and only.</small>
+        <br>
+        <small id="passwordHelp" class="text-danger">
+            <i><sup>*</sup>We highly recommend you to allow location access to efficiently track your allergy</i>
+        </small>
+    </p>
+
+</div>
+<br>
+{% endblock logged_in_user %}
+
+
+{% block modal_footer %}
+<!-- COOKIE MODAL -->
+<div class="modal fade bottom" id="accept_cookies" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-frame modal-bottom" role="document">
+
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row d-flex justify-content-center align-items-center">
+
+                    <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a
+                        href="https://cookiesandyou.com/" target="_blank">Learn more</a>
+
+                    <button type="button" class="btn btn-primary btn-sm acceptcookies" data-dismiss="modal">
+                        Got it!
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock modal_footer %}
+
+
+<!-- LOGGED OUT -->
+{% block logged_out_user %}
+<br><br>
+<p class="article_column" style="padding-bottom: 1rem;"><i class="fas fa-globe-americas"></i>&nbsp;Daily News</p>
+<div class="card card-cascade">
+
+    <div class="view view-cascade overlay">
+        <img src="{{ url_for('static', filename='icons/home/covid_dashboards.jpg') }}" class="card-img-top" alt="icon">
+    </div>
+
+    <div class="card-body card-body-cascade text-center">
+        <h5 class="card-title" style="color: crimson;">COVID-19</h5>
+        <p class="card-text">
+            Get informed about the virus by checking these great dashboards.<br><br>
+            <a class="article_link" target="_blank" role="link" href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html?fbclid=IwAR2NsthQhaWjcgI4CoJ8W1eTa0SXgMLv6fFTVwx8Ps9qoQ61iU2hcDlpPns#/bda7594740fd40299423467b48e9ecf6">Take a look</a>
+        </p>
+    </div>
+
+</div><br><br>
+
+<div class="card card-cascade">
+
+    <div class="view view-cascade overlay">
+        <img src="{{ url_for('static', filename='icons/home/healthy_food.jpg') }}" class="card-img-top" alt="icon">
+    </div>
+
+    <div class="card-body card-body-cascade text-center">
+        <h5 class="card-title">'Boost' Your Immune System Against <span style="color: crimson;">COVID-19</span></h5>
+        <p class="card-text">
+            Food remains to these difficult situations the best way to protect ourselves!<br><br>
+            <a class="article_link" target="_blank" role="link" href="https://medicalxpress.com/news/2020-04-boost-immune-covid-.html">Take a look</a>
+        </p>
+    </div>
+
+</div><br>
+{% endblock logged_out_user %}
+
+
+{% block extra_scripts_common %}
+<!-- Leaflet Maps -->
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+<!-- Spin -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/lib/third_party/spin.min.js') }}"></script>
+<!-- Leaflet Spin -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/lib/third_party/leaflet.spin.min.js') }}"></script>
+<!-- Leaflet Plugin PointInPolygon -->
+<script src="https://rawgit.com/hayeswise/Leaflet.PointInPolygon/master/wise-leaflet-pip.js"></script>
+<!-- Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?key={{google_maps_api_key}}&libraries=visualization&callback=initMap"
+    async defer></script>
+
+
+<!-- Custom -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/lib/init_gmaps.js') }}"></script>
+<!-- Sensor-based maps -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/lib/sensor_maps/sensor_lmap_settings.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/lib/sensor_maps/sensor_gmap_settings.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/sensor_based_maps.js') }}"></script>
+<!-- VAS-based maps -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/lib/vas_maps/vas_lmap_settings.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/lib/vas_maps/vas_gmap_settings.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/vas_based_maps.js') }}"></script>
+<!-- Twitter map -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/lib/twitter_map/twitter_lmap_settings.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/twitter_map.js') }}"></script>
+<!-- Hybrid MCS map -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/lib/hybrid_mcs_map/hybrid_mcs_lmap_settings.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/hybrid_mcs_map.js') }}"></script>
+<!-- Hybrid General map -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/lib/hybrid_map/hybrid_lmap_settings.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/hybrid_map.js') }}"></script>
+<!-- Humidity map -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/lib/humidity_map/humidity_lmap_settings.js') }}"></script>
+<!-- <script type="text/javascript" src="{{ url_for('static', filename='js/home/lib/humidity_map/humidity_gmap_settings.js') }}"></script> -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/humidity_map.js') }}"></script>
+{% endblock extra_scripts_common %}
+
+
+{% block extra_scripts_logged_in %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/lib/cookies_helpers.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/lib/mini_gmap.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/vas.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/home/cookie_alert.js') }}"></script>
+{% endblock extra_scripts_logged_in %}

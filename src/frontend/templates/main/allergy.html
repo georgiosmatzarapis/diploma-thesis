@@ -1,0 +1,164 @@
+{% extends "snippets/layouts/layout_general.html" %}
+
+{% block links %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/allergy_about.css') }}">
+{% endblock links %}
+
+{% block content %}
+<div class="content_allergy">
+    <div class="wrapper">
+        <img src="{{ url_for('static', filename='icons/allergy/info.png') }}" alt="Humidity icon"
+            style="width:29px;height:29px;">
+        <h2 style="text-align: center; padding-top: 0.8rem;">&nbsp;&nbsp;Allergy Information</h2>
+    </div><br><br>
+
+
+    <div class="card border-light mb-3">
+        <div class="card-header" style="padding: 0.5rem;">
+            <h3>What is Allergy</h3>
+        </div>
+        <div class="card-body">
+            <p style="text-align: justify;">
+                Allergies occur when your immune system reacts to a foreign substance — such as pollen, bee venom or pet
+                dander
+                — or a food that doesn't cause a reaction in most people.<br><br>
+                Your immune system produces substances known as antibodies. When you have allergies, your immune system
+                makes
+                antibodies that identify a particular allergen as harmful, even though it isn't. When you come into
+                contact with
+                the allergen, your immune system's reaction can inflame your skin, sinuses, airways or digestive
+                system.<br><br>
+                The severity of allergies varies from person to person and can range from minor irritation to
+                anaphylaxis — a
+                potentially life-threatening emergency. While most allergies can't be cured, treatments can help relieve
+                your allergy symptoms.</p>
+        </div>
+    </div><br>
+
+    <div class="card border-light mb-3">
+        <div class="card-header" style="padding: 0.5rem;">
+            <h3>Causes & Symptoms of Allergy</h3>
+        </div>
+        <div class="card-body">
+            <p style="text-align: justify;">
+                <span><b>Causes:</b></span><br>
+                When an allergic reaction occurs, allergens bind to antibodies that the body produces called
+                immunoglobin E (IgE).
+                Antibodies combat foreign and potentially harmful substances in the body.<br><br>
+                Once the allergen binds to IgE, specific types of cells — including mast cells — will release chemicals
+                that trigger
+                the symptoms of the allergic reaction.<br><br>
+                Histamine is one of these chemicals. It causes the muscles in the airways and walls of the blood vessels
+                to tighten.
+                It also instructs the lining of the nose to produce more mucus.<br><br>
+                <span><b>Symptoms:</b></span><br>
+                Considering to the symptoms which are triggered from pollen, are the following,<br>
+                <ul>
+                    <li>sneezing</li>
+                    <li>wheezing</li>
+                    <li>nasal congestion</li>
+                    <li>coughing</li>
+                    <li>itchy, watery eyes</li>
+                    <li>runny nose</li>
+                    <li>itchy throat</li>
+                    <li>stomach ache</li>
+                    <li>itchy skin</li>
+                    <li>hives</li>
+                    <li>fatigue</li>
+                    <li>irritability</li>
+                </ul>
+            </p>
+        </div>
+    </div><br>
+
+    <div class="card border-light mb-3">
+        <div class="card-header" style="padding: 0.5rem;">
+            <h3>Pollen Allergen</h3>
+        </div>
+        <div class="card-body">
+            <p style="text-align: justify;">
+                Pollen is one of the most common allergens in the United States and specifically over 40 million people
+                are affected.
+                Many people know pollen allergy as “hay fever”. Experts usually refer to pollen allergy as “seasonal
+                allergic rhinitis.”<br><br>
+                Each spring, summer and fall, plants release tiny pollen grains to fertilize other plants of the same
+                species. Most of
+                the pollens that cause allergic reactions come from trees, weeds and grasses. These plants make small,
+                light and dry
+                pollen grains that travel by the wind.<br><br>
+                Grasses are the most common cause of allergy. Ragweed is a main cause of weed allergies. Other common
+                sources of weed pollen
+                include sagebrush, pigweed, lamb’s quarters and tumbleweed. Certain species of trees, including birch,
+                cedar and oak, also
+                produce highly allergenic pollen.<br><br>
+                Plants fertilized by insects, like roses and some flowering trees, like cherry and pear trees, usually
+                do not cause allergic rhinitis.
+            </p>
+        </div>
+    </div><br>
+
+    <div class="card border-light mb-3">
+        <div class="card-header" style="padding: 0.5rem;">
+            <h3>Allergy Test</h3>
+        </div>
+        <div class="card-body">
+            <p style="text-align: justify;">
+                An allergy test is an exam performed by a trained allergy specialist to determine if your body has an
+                allergic reaction to a known
+                substance. The exam can be in the form of a blood test, a skin test, or an elimination diet.<br><br>
+                An allergy test may involve either a skin test or a blood test. You may have to go on an elimination
+                diet if your doctor thinks
+                you might have a food allergy.<br><br>
+                <span><b>Preparation:</b></span><br>
+                Before your allergy test, your doctor will ask you about your lifestyle, family history, and more.
+                They’ll most likely tell you to stop taking the following medications before your allergy test because
+                they can affect the test results:<br>
+                <ul>
+                    <li>prescription and over-the-counter antihistamines</li>
+                    <li>certain heartburn treatment medications, such as famotidine (Pepcid)</li>
+                    <li>anti-IgE monoclonal antibody asthma treatment, omalizumab (Xolair)</li>
+                    <li>benzodiazepines, such as diazepam (Valium) or lorazepam (Ativan)</li>
+                    <li>tricyclic antidepressants, such as amitriptyline (Elavil)</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+
+{% block about_content %}
+<br><br>
+<p class="article_column"><i class="far fa-newspaper"></i>&nbsp;Related Articles</p>
+<div class="card card-cascade">
+
+    <div class="view view-cascade overlay">
+        <img src="{{ url_for('static', filename='icons/allergy/humidity.jpg') }}" class="card-img-top" alt="icon">
+    </div>
+
+    <div class="card-body card-body-cascade text-center">
+        <h5 class="card-title">Humidity & Allergy</h5>
+        <p class="card-text">
+            Humidty is a very important factor of how it affects our allergy.<br><br>
+            <a class="article_link" target="_blank" role="link" href="https://www.achooallergy.com/blog/learning/home-humidity-and-allergies/">Take a look</a>
+        </p>
+    </div>
+
+</div><br><br>
+
+<div class="card card-cascade">
+
+    <div class="view view-cascade overlay">
+        <img src="{{ url_for('static', filename='icons/allergy/travel.jpg') }}" class="card-img-top" alt="icon">
+    </div>
+
+    <div class="card-body card-body-cascade text-center">
+        <h5 class="card-title">Tips for Travelling with Allergies</h5>
+        <p class="card-text">
+            Nothing can stop you from enjoying your trip!<br><br>
+            <a class="article_link" target="_blank" role="link" href="https://health.clevelandclinic.org/best-tips-for-traveling-with-allergies/">Take a look</a>
+        </p>
+    </div>
+
+</div><br>
+{% endblock about_content %}

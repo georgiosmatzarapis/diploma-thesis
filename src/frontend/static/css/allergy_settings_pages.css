@@ -1,0 +1,17 @@
+.article_column {
+    font-family: "Grotesque MT STD","Trebuchet MS",Tahoma;
+	font-size: 21px;
+	color: rgb(223, 154, 27);
+	font-style: italic;
+}
+
+.article_link {
+	font-family: Georgia;
+	font-size: 17px;
+	color: #03672a;
+	font-style: italic;
+    text-decoration: underline;
+    background: url('../icons/href.png') no-repeat 100% 0;
+    background-size: 13px 13px;
+    padding-right: 19px;
+}

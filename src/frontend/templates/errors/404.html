@@ -1,0 +1,13 @@
+{% if session.get('first_login') %}
+    {% extends "snippets/layouts/layout_first_login.html" %}
+{% else %}
+    {% extends "snippets/layouts/layout_general.html" %}
+{% endif %}
+
+
+{% block content %}
+<div class="content">
+    <h1>Oops. Page Not Found (404)</h1>
+    <p>That page does not exist. Please try a different location</p>
+</div>
+{% endblock content %}

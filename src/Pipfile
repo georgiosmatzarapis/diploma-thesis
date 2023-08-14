@@ -1,0 +1,37 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+flask = "==1.1.1"
+flask-bcrypt = "==0.7.1"
+flask-pymongo = "==2.3.0"
+flask-restplus = "==0.13.0"
+pyyaml = "==5.1.2"
+pymongo = "==3.10.0"
+pyowm = "==2.10.0"
+async-timeout = "==3.0.1"
+aiohttp = "==3.6.2"
+pyiqvia = "==0.2.3"
+aniso8601 = "==8.0.0"
+iso8601 = "==0.1.12"
+pytz = "==2019.3"
+python-dateutil = "==2.8.0"
+pandas = "==0.25.1"
+pgeocode = "==0.2.1"
+tweepy = "==3.8.0"
+flask-mongo-sessions = "==0.2.1"
+flask-session = "==0.3.1"
+flask-sessions = "==0.1.5"
+wtforms = "==2.2.1"
+flask-wtf = "==0.14.3"
+flask-widgets = "==0.5"
+werkzeug = "==0.16.0"
+jinja2 = "==2.10.3"
+prettyprint = "*"
+
+[requires]
+python_version = "3.7.4"

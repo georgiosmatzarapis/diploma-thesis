@@ -1,0 +1,83 @@
+{% if session.get('first_login') %}
+    {% extends "snippets/layouts/layout_first_login.html" %}
+{% else %}
+    {% extends "snippets/layouts/layout_general.html" %}
+{% endif %}
+
+{% block links %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/allergy_settings_pages.css') }}">
+{% endblock links %}
+
+
+{% block content %}
+<div class="content-section">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4" style="color: #043a6d;"><b>Allergy Symptoms</b></legend>
+
+            <div class="form-group">
+                <b>{{ form.allergy_symptoms.label(class="form-control-label") }}</b> <br>
+                {% if form.allergy_symptoms.errors %}
+                    <div class="is-invalid">
+                        {% for choice in form.allergy_symptoms %}
+                            <div class="form-check">
+                                {{ choice(class="form-check-input") }}
+                                {{ choice.label(class="form-check-label") }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="invalid-feedback">
+                        {% for error in form.allergy_symptoms.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {% for choice in form.allergy_symptoms %}
+                        <div class="form-check">
+                            {{ choice(class="form-check-input") }}
+                            {{ choice.label(class="form-check-label") }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+        </fieldset>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-outline-info") }}
+        </div>
+    </form>
+</div><br>
+{% endblock content %}
+
+
+{% block logged_in_user %}
+<div class="content_allergies">
+    <p class="article_column"><i class="far fa-newspaper"></i>&nbsp;Related Articles</p>
+    <br>
+    <div class="card card-cascade">
+
+        <div class="view view-cascade overlay">
+            <img src="{{ url_for('static', filename='icons/allergy_settings/confused.jpg') }}" class="card-img-top" alt="icon">
+        </div>
+
+        <div class="card-body card-body-cascade text-center">
+            <h5 class="card-title">Allergy VS Covid-19 Symptoms</h5>
+            <p class="card-text">
+                Are you confused?<br>Get a clear picture of the symptoms!<br><br>
+                <a class="article_link" target="_blank" role="link"
+                    href="https://www.familyallergy.com/general/allergy-symptoms-vs-covid-19-symptoms/">Take a look</a>
+            </p>
+
+            <!-- covid info -->
+            <div class="view view-cascade overlay">
+                <img src="{{ url_for('static', filename='icons/allergy_settings/covid.jpg') }}" class="card-img-top" alt="narrower">
+                <a target="_blank" href="https://eody.gov.gr/en/covid-19/">
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div><br>
+{% endblock logged_in_user %}

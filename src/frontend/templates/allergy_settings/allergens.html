@@ -1,0 +1,85 @@
+{% if session.get('first_login') %}
+    {% extends "snippets/layouts/layout_first_login.html" %}
+{% else %}
+    {% extends "snippets/layouts/layout_general.html" %}
+{% endif %}
+
+
+{% block links %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/allergy_settings_pages.css') }}">
+{% endblock links %}
+
+
+{% block content %}
+<div class="content_allergies">
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4" style="color: #043a6d;"><b>Allergens</b></legend>
+
+                <div class="form-group">
+                    <b>{{ form.allergens1.label(class="form-control-label") }}</b> <br>
+                
+                    <div class="row">
+                        {% for choice in form.allergens1 %}
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    {{ choice(class="form-check-input") }}
+                                    {{ choice.label(class="form-check-label") }}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        {% for choice in form.allergens2 %}
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    {{ choice(class="form-check-input") }}
+                                    {{ choice.label(class="form-check-label") }}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        {% for choice in form.allergens3 %}
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    {{ choice(class="form-check-input") }}
+                                    {{ choice.label(class="form-check-label") }}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    {% if session.get('first_login') %}
+                        {% if (form.allergens1.data == []) and (form.allergens2.data == []) and (form.allergens3.data == []) %}
+                            <small id="passwordHelp" class="text-danger">
+                                {{ data_required.error }}
+                            </small> 
+                        {% endif %}
+                    {% endif %}
+                </div>
+
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+</div><br>
+{% endblock content %}
+
+{% block logged_in_user %}
+<p class="article_column"><i class="far fa-newspaper"></i>&nbsp;Related Articles</p>
+<br>
+<div class="card card-cascade">
+
+    <div class="view view-cascade overlay">
+        <img src="{{ url_for('static', filename='icons/allergy_settings/allergen.jpg') }}" class="card-img-top" alt="icon">
+    </div>
+
+    <div class="card-body card-body-cascade text-center">
+        <h5 class="card-title">Allergens</h5>
+        <p class="card-text">
+            All you need to know about allergens.<br><br>
+            <a class="article_link" target="_blank" role="link" href="https://en.wikipedia.org/wiki/Allergen">Take a look</a>
+        </p>
+    </div>
+</div><br>
+{% endblock logged_in_user %}

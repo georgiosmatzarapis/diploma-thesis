@@ -1,0 +1,14 @@
+[
+  {"Fatigue": ["Fatigue", "wear out", "tiredness", "tire", "weariness", "tire out", "outwear", "wear down", "fatigue duty", "wear", "pall", "fag", "wear upon", "weary"]},
+  {"Watery Eyes": ["Watery Eyes", "sobbing","teary","teary-eyed","wailing,blubbering","howling","tearful","weepy"]},
+  {"Headache": ["Headache", "cephalalgia",  "head ache"]},
+  {"Runny Nose": ["Runny Nose", "rhinorrhea", "snotty nose"]},
+  {"Itchy Eyes": ["Itchy Eyes"]},
+  {"Coughing": ["Coughing", "cough", "whoop"]},
+  {"Sore Throat": ["Sore Throat", "tonsilitis", "pharyngitis", "throat infection", "strep throat"]},
+  {"Shortness of Breath":["Shortness of Breath", "breathlessness","dyspnoea", "dyspnea"]},
+  {"Sneezing": ["Sneezing", "sneeze","sternutation"]},
+  {"Nasal Congestion": ["Nasal Congestion", "Congestion", "Nose Congestion"]},
+  {"Red Eyes": ["Red Eyes", "painful eyes"]},
+  {"Wheezing": ["Wheezing", "asthmatic", "wheeze", "wheezy"]}
+]

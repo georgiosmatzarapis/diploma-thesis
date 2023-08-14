@@ -1,0 +1,175 @@
+{% extends "snippets/layouts/layout_general.html" %}
+
+{% block links %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/allergy_about.css') }}">
+{% endblock links %}
+
+{% block content %}
+<div class="content_allergy">
+    <div class="wrapper">
+        <img src="{{ url_for('static', filename='icons/about/title.png') }}" alt="icon"
+            style="width:35px;height:35px;">
+        <h2 style="text-align: center; padding-top: 1.25rem;">&nbsp;&nbsp;About Allergy Map - U.S.</h2>
+    </div>
+    <br>
+    <p style="text-align: justify;">
+        Allergymapus.com is a web platform in which you are able to track your allergies by submitting your daily symptoms and also stay informed
+        about past, current and future data which are related with allergies, pollen and humidity levels. In addition, you are given the ability to keep and 
+        update a personal profile with various allergy data and also your received medication.<br><br>
+        Considering the part of allergy tracking, you can visit 'myHealth' from the navigation menu, where you can find the line graph of your 
+        health status and also a heatmap which contains the locations you have visited. Both features are depended on the submission of daily 
+        symptoms form, which is located at the home page and we highly recommend filling out.<br><br>
+        At the home page, you can check allergy, pollen and humidity levels in the U.S.A. region. Starting with pollen, two color maps have been created by accessing
+        pollen sensor values ​​located in the US geographical area. The first map gives the color of the areas based on the average of the pollen pollen levels, while
+        the second one displays these values ​​based on the location of each sensor. The last map helps the user in order to know the distribution
+        of the sensors and secondly to be able to better understand the intensity and density of the pollen levels. Then for the performance of the allergy levels, 
+        there are also two maps of the same format as the above, with the difference that they depict the symptom levels of the users of the platform. Furthermore, an 
+        additional map is provided in order to depict the number of tweets related to allergies and more focused on pollen allergies. 
+        Finally, two more hybrid maps are offered. The first depicts in combination the two subjective inputs of the system, users's symptoms of the platform and 
+        tweets, and the second depicts with appropriate weights all the above information. <br><br>
+        The information provided by Allergymapus.com has a complementary role. This means that we do not intend to replace any advice given by a
+        health professional. Furthermore, we respect the legal requirements, including those concerning medical and personal information privacy
+        applying in the United States of America.<br><br>
+    </p>
+    <p>
+        <b style="font-weight: bold;"><i class="far fa-paper-plane"></i>&nbsp;Contact:</b> 
+        <a href = "mailto: matzarapis@ceid.upatras.gr">Email</a>, 
+        <a href="https://www.linkedin.com/in/georgios-matzarapis-494275189" target="_blank">LinkedIn</a>
+    </p>
+    <hr><br>
+
+    <!-- Maps Guide --> 
+    <!-- TODO Improve descriptions. -->
+    <div class="wrapper">
+        <h2 style="text-align: center; padding-top: 1.25rem;"><i class='fas fa-map-marked-alt'></i>&nbsp;&nbsp;Maps Guide</h2>
+    </div><br>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="sensor_map-tab" data-toggle="tab" href="#sensor_map" role="tab" aria-controls="sensor_map"
+                aria-selected="true">Pollen Maps</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="vas_map-tab" data-toggle="tab" href="#vas_map" role="tab" aria-controls="vas_map"
+                aria-selected="false">V.A.S. Maps</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="twitter_map-tab" data-toggle="tab" href="#twitter_map" role="tab" aria-controls="twitter_map"
+                aria-selected="false">Twitter Allergy Map</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="hybrid_mcs_map-tab" data-toggle="tab" href="#hybrid_mcs_map" role="tab" aria-controls="hybrid_mcs_map"
+                aria-selected="false">Hybrid Crowdsourcing Map</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="hybrid_map-tab" data-toggle="tab" href="#hybrid_map" role="tab" aria-controls="hybrid_map"
+                aria-selected="false">Hybrid Map</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="humidity_map-tab" data-toggle="tab" href="#humidity_map" role="tab" aria-controls="humidity_map"
+                aria-selected="false">Humidity Map</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="sensor_map" role="tabpanel" aria-labelledby="sensor_map-tab">
+            <br>Provide information about the pollen levels and the associated allergens.
+        </div>
+        <div class="tab-pane fade" id="vas_map" role="tabpanel" aria-labelledby="vas_map-tab">
+            <br>The abbreviation V.A.S. stands for value-added service. In other words, this map provides infomartion about 
+            users's symptoms scale of our platform, which is retrieved from the "Daily Symptoms" form at home page.
+        </div>
+        <div class="tab-pane fade" id="twitter_map" role="tabpanel" aria-labelledby="twitter_map-tab">
+            <br>Provide information about the number of tweets related with allergy and pollen, at each state of America.
+        </div>
+        <div class="tab-pane fade" id="hybrid_mcs_map" role="tabpanel" aria-labelledby="hybrid_mcs_map-tab">
+            <br>Provide information based on crowd inputs. In other words its a hybridization approach of both V.A.S. and Twitter maps.
+        </div>
+        <div class="tab-pane fade" id="hybrid_map" role="tabpanel" aria-labelledby="hybrid_map-tab">
+            <br>A hybridization approach of Pollen, V.A.S. and Twitter Allergy maps.
+        </div>
+        <div class="tab-pane fade" id="humidity_map" role="tabpanel" aria-labelledby="humidity_map-tab">
+            <br>Provide information about the humidity levels.
+        </div>
+    </div>
+    <hr><br>
+
+    <p style="font-weight: bold;">Short biography of contributors and supervisors in this academic work, in alphabetical order:</p><br>
+
+    <ul style="text-align: justify;">
+        <li>
+            <b style="font-weight: bold;">Andreas Bardoutsos</b> is a Postgraduate student at Computer Engineering & Engineering Department
+            at University of Patras and junior researcher at CTI Diophantus on wireless sensor networks. Fields of study include technology
+            and growth, IoT applications, dev ops, cryptocurrencies and blockchain. Additionally climber,member of local hiking club, member
+            of local team on public commons.
+        </li><br>
+        <li>
+            <b style="font-weight: bold;">Giorgos Matzarapis</b> is an Undergraduate student at the Department of Computer Engineering and
+            Informatics at the University of Patras in Greece. His research interests include the implementation of IoT and, by extension, 
+            Mobile Crowd Sensing (MCS) systems, back-end web development and computer networks.
+        </li><br>
+        <li>
+            <b style="font-weight: bold;">Sotiris Nikoletseas</b> is a Full Professor at the Computer Engineering 
+            and Informatics Department of Patras University, Greece. Also, the Director of the SensorsLab and a Scientific Consultant 
+            of the Algorithms Group at the Computer Technology Institute and Press “Diophantus” (CTI), Greece. He has been a Visiting 
+            Professor at the Universities of Geneva, Ottawa and Southern California (USC). His research interests include algorithmic
+            aspects of wireless sensor networks and the Internet of Things (IoT), wireless energy transfer protocols, probabilistic 
+            techniques and random graphs, average case analysis and probabilistic algorithms, algorithmic engineering.
+        </li><br>
+        <li>
+            <b style="font-weight: bold;">Pantelis Tzamalis</b> is currently a Ph.D. candidate in the Computer Engineering and Informatics
+            Department at the University of Patras, Greece. He has worked as a freelance web developer in the past. At this time, he is 
+            working as a Research Engineer, System Architect and Senior Developer at the Computer Technology Institute and Press “Diophantus”,
+            and the University of Patras, while at the same time he has been undertaking the development of an Open Source tool in collaboration
+            with Google and JBoss (Red Hat) in Google Summer of Code 2019. He has also co-authored publications in international refereed 
+            conferences (ΙΕΕΕ). His research interests include Mobile Crowdsensing platforms, Social Network Analysis, Web Crawling, Machine
+            Learning, Big Data Analysis, and Visualization, as well as the Internet of Things. He has participated in various European and
+            National funded research projects (SAINT, Privacy Flag, Personal Allergy Tracer).
+        </li>
+    </ul>
+    <br>
+
+    <div class="divider div-transparent"></div><br>
+</div>
+{% endblock content %}
+
+
+{% block about_content %}
+<br><br>
+<p class="article_column" style="color: rgb(26, 160, 184); padding-bottom: 1rem;"><i class="fas fa-university"></i>&nbsp;University of Patras</p>
+<div class="card card-cascade">
+
+    <div class="view view-cascade overlay">
+        <img src="{{ url_for('static', filename='icons/about/university.png') }}" style="height: 220px;" class="card-img-top" alt="icon">
+    </div>
+
+    <div class="card-body card-body-cascade text-center">
+        <a class="article_link" target="_blank" role="link" href="http://www.upatras.gr/en">Take a look</a>
+    </div>
+
+</div><br>
+
+<div class="card card-cascade">
+
+    <div class="view view-cascade overlay">
+        <img src="{{ url_for('static', filename='icons/about/ceid.jpg') }}" class="card-img-top" alt="icon">
+    </div>
+
+    <div class="card-body card-body-cascade text-center">
+        <h5 class="card-title">Department of Computer Engineering & Informatics</h5>
+        <a class="article_link" target="_blank" role="link" href="https://www.ceid.upatras.gr/en">Take a look</a>
+    </div>
+
+</div><br>
+
+<div class="card card-cascade">
+
+    <div class="view view-cascade overlay">
+        <img src="{{ url_for('static', filename='icons/about/iot1.jpg') }}" class="card-img-top" alt="icon">
+    </div>
+
+    <div class="card-body card-body-cascade text-center">
+        <img src="{{ url_for('static', filename='icons/about/iot2.png') }}" class="card-img-top" alt="icon"><br><br>
+        <a class="article_link" target="_blank" role="link" href="https://iotlab.ceid.upatras.gr/">Take a look</a>
+    </div>
+
+</div><br>
+{% endblock about_content %}

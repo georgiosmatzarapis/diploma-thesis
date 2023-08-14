@@ -1,0 +1,78 @@
+{% extends "snippets/layouts/layout_first_login.html" %}
+
+{% block links %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/vas_first_login.css') }}">
+{% endblock links %}
+
+{% block content %}
+<div class="content_allergies">
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Complete your daily symptoms</legend>
+
+                <div class="slidecontainer">
+                    <b>{{ form.today_symptoms.label(class="form-control-label") }}</b> <br>
+                    {{ form.today_symptoms(type="range", class="slider", min="0", max="12", step="1") }}
+                    <p class="left">Low</p>
+                    <p class="right">High</p>
+                </div><br><br>
+
+                <div class="slidecontainer">
+                    <b>{{ form.rhinitis_symptoms_today.label(class="form-control-label") }}</b> <br>
+                    {{ form.rhinitis_symptoms_today(type="range", class="slider", min="0", max="12", step="1") }}
+                    <p class="left">Low</p>
+                    <p class="right">High</p>
+                </div><br><br>
+
+                <div class="slidecontainer">
+                    <b>{{ form.asthma_symptoms_today.label(class="form-control-label") }}</b> <br>
+                    {{ form.asthma_symptoms_today(type="range", class="slider", min="0", max="12", step="1") }}
+                    <p class="left">Low</p>
+                    <p class="right">High</p>
+                </div><br><br>
+
+                <div class="slidecontainer">
+                    <b>{{ form.conjunctivitis_symptoms_today.label(class="form-control-label") }}</b> <br>
+                    {{ form.conjunctivitis_symptoms_today(type="range", class="slider", min="0", max="12", step="1") }}
+                    <p class="left">Low</p>
+                    <p class="right">High</p>
+                </div><br><br>
+
+                <div class="form-field">
+                    <b>{{ form.work_school_today.label(class="form-control-label") }}</b> <br>
+                    {% if form.work_school_today.errors %}
+                        <div class="is-invalid">
+                            {{form.work_school_today(class="browser-default custom-select")}}
+                        </div>
+                        <div class="invalid-feedback">
+                            {% for error in form.work_school_today.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{form.work_school_today(class="browser-default custom-select", id="work_school_form")}}
+                    {% endif %}
+                </div><br>
+
+                <div class="slidecontainer" id="work_school_today_hide">
+                    <b>{{ form.work_affection.label(class="form-control-label") }}</b> <br>
+                    {{ form.work_affection(type="range", class="slider", min="0", max="12", step="1") }}
+                    <p class="left">Low</p>
+                    <p class="right">High</p>
+                </div><br>
+
+
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}
+
+{% block extra_scripts_logged_in %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/first_login_vas/geolocation_and_hive_div.js') }}"></script>
+{% endblock extra_scripts_logged_in %}

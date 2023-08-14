@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% include 'snippets/links.html' %}
+
+    {% block links %}{% endblock %}
+    
+    {% if title %}
+        <title>Allergy Map USA - {{ title }}</title>
+    {% else %}
+        <title>Allergy Map USA</title>
+    {% endif %}
+</head>
+
+<body>
+    <header class="site-header">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-steel fixed-top">
+            <div class="container">
+
+                <a class="navbar-brand" href="/">Allergy Map - US</a>
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basic_nav"
+                aria-controls="basic_nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="basic_nav">
+
+                    <ul class="navbar-nav mr-auto">
+                    {% if session.get('logged_in') %}
+                        <li class="nav-item"><a class="nav-item nav-link" href="{{ url_for('main.myhealth') }}">myHealth</a></li>
+                        <li class="nav-item"><a class="nav-item nav-link" href="{{ url_for('main.allergy') }}">Allergy</a></li>
+                        <li class="nav-item"><a class="nav-item nav-link" href="{{ url_for('main.about') }}">About</a></li>
+                    {% else %}
+                        <li class="nav-item"><a class="nav-item nav-link" href="{{ url_for('main.allergy') }}">Allergy</a></li>
+                        <li class="nav-item"><a class="nav-item nav-link" href="{{ url_for('main.about') }}">About</a></li>
+                    {% endif %}
+                    </ul>
+                    <!-- Navbar Right Side -->
+                    <ul class="navbar-nav ml-auto">
+                    {% if session.get('logged_in') %}
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-heartbeat"></i> MyAllergy</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="{{ url_for('allergy_settings.allergy_data') }}">Update Allergy Data</a>
+                                <a class="dropdown-item" href="{{ url_for('allergy_settings.allergy_symptoms') }}">Update Allergy Symptoms</a>
+                                <a class="dropdown-item" href="{{ url_for('allergy_settings.allergens') }}">Update Allergens</a>
+                                <a class="dropdown-item" href="{{ url_for('allergy_settings.medicines') }}">Update Medicines</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-user"></i> Profile</a>
+                            <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink1">
+                                <a class="dropdown-item" href="{{ url_for('users.profile') }}"><i class='far fa-user'></i> My account</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{{ url_for('users.logout') }}"><i class='fas fa-sign-out-alt'></i> Sign out</a>
+                            </div>
+                        </li>
+
+                    {% else %}
+
+                        <li class="nav-item">
+                            <div class="btn-group btn-group-toggle">
+                                <a href="{{ url_for('users.login') }}" style="padding: 10px;" class="btn btn-light btn-md curved_edge_button" role="button">Login</a>
+                                <a href="{{ url_for('users.register') }}" style="padding: 10px;" class="btn btn-blue-grey btn-md curved_edge_button" role="Register">Register</a>
+                            </div>
+                        </li>
+
+                    {% endif %}
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+        {% if session.get('logged_in') %}
+            {% block modal_header %}{% endblock %}
+        {% endif %}
+    </header>
+
+
+    {% if session.get('logged_in') or (requested_page == 'home') or (requested_page == 'about') or
+            (requested_page == 'allergy') or (requested_page == '404') or (requested_page == '403') or 
+            (requested_page == '500') %}
+
+        <main role="main" class="container">
+            <div class="row">
+
+            {% if requested_page == 'profile' %}
+
+                <!-- MAIN SECTION -->
+                <div class="col-xl-8">
+                    {% block account_info %}{% endblock %}
+                </div>
+    
+                <!-- SIDEBAR -->
+                <div class="col-xl-4">
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                                <div class="alert alert-{{ category }}">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                    <div class="content-section">
+                        {% block change_password %}{% endblock %}
+                    </div><br>
+                    <div class="content-section">
+                        {% block update_account %}{% endblock %}
+                    </div><br>
+                    <div class="content-section">
+                        {% block delete_account %}{% endblock %}
+                    </div>
+                </div>
+
+            {% else %}
+
+                <!-- MAIN SECTION -->
+                {%if requested_page == 'home' or requested_page == 'allergy' or requested_page == 'about' %}
+                    <div class="col-lg-9">
+                {% elif requested_page == 'myhealth' %}
+                    <div class="col-lg-8">
+                {% else %}
+                    <div class="col-md-8">
+                {% endif %}
+
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                                <div class="alert alert-{{ category }}">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                    {% block content %}{% endblock %}
+                </div>
+                
+
+                <!-- SIDEBAR -->
+                {%if requested_page == 'home' or requested_page == 'allergy' or requested_page == 'about' %}
+                    <div class="col-lg-3">
+                {% elif requested_page == 'myhealth' %}
+                    <div class="col-lg-4">
+                {% else %}
+                    <div class="col-md-4">
+                {% endif %}
+
+                    {% if requested_page == 'about' or requested_page == 'allergy' %}
+
+                        {% block about_content %}{% endblock %}
+
+                    {% else %}
+
+                        {% if session.get('logged_in') %}
+                            {% block logged_in_user %}{% endblock %}
+                        {% else %}
+                            {% block logged_out_user %}{% endblock %}
+                        {% endif %}
+
+                    {% endif %}  
+                </div>
+
+            {% endif %}
+
+            </div>
+        </main>
+
+
+    {% else %}
+
+
+        {% if (requested_page == 'login') or (requested_page == 'register')  %}
+
+            <div class="content">
+                <main role="main" class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            {% with messages = get_flashed_messages(with_categories=true) %}
+                                {% if messages %}
+                                    {% for category, message in messages %}
+                                        <div class="alert alert-{{ category }}">
+                                            {{ message }}
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endwith %}
+                            {% block content1 %}{% endblock %}
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+        {% endif %}
+
+    {% endif %}
+
+
+    {% if session.get('logged_in') %}
+        {% block modal_footer %}{% endblock %}
+    {% endif %}
+
+    {% include 'snippets/footer.html' %}
+
+    {% include 'snippets/scripts.html' %}
+
+    {% block extra_scripts_common %}{% endblock %}
+
+    {% if session.get('logged_in') %}
+        {% block extra_scripts_logged_in %}{% endblock %}
+    {% endif %}
+
+
+</body>
+
+</html>

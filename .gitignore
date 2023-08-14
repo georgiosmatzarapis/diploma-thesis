@@ -1,0 +1,6 @@
+# ignore ide/editor setting and pycache
+.idea/
+.vscode/
+__pycache__/
+
+config.yaml

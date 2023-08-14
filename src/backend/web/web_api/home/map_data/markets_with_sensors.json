@@ -1,0 +1,2211 @@
+[
+    {
+        "market": "ABE",
+        "sensors": [
+            "WILKES BARRE, PA",
+            "MARSHALLS CREEK, PA",
+            "ALLENTOWN, PA",
+            "READING, PA"
+        ]
+    },
+    {
+        "market": "ABI",
+        "sensors": [
+            "ABILENE, TX"
+        ]
+    },
+    {
+        "market": "ABQ",
+        "sensors": [
+            "DATIL, NM",
+            "SAN ANTONIO, NM",
+            "TOME, NM",
+            "LOS LUNAS, NM",
+            "ALBUQUERQUE, NM",
+            "JEMEZ PUEBLO, NM"
+        ]
+    },
+    {
+        "market": "ABR",
+        "sensors": [
+            "FULLERTON, ND",
+            "ASHLEY, ND",
+            "LEOLA, SD",
+            "ABERDEEN, SD",
+            "ANDOVER, SD",
+            "SUMMIT, SD"
+        ]
+    },
+    {
+        "market": "ABY",
+        "sensors": [
+            "ALBANY, GA",
+            "AMERICUS, GA"
+        ]
+    },
+    {
+        "market": "ACT",
+        "sensors": [
+            "WACO, TX"
+        ]
+    },
+    {
+        "market": "ACY",
+        "sensors": [
+            "MANAHAWKIN, NJ",
+            "OCEAN CITY, NJ",
+            "VENTNOR CITY, NJ"
+        ]
+    },
+    {
+        "market": "AHN",
+        "sensors": [
+            "ATHENS, GA",
+            "GAINESVILLE, GA"
+        ]
+    },
+    {
+        "market": "ALB",
+        "sensors": [
+            "CATSKILL, NY",
+            "HUDSON, NY",
+            "ALBANY, NY",
+            "GLOVERSVILLE, NY",
+            "GLENS FALLS, NY",
+            "PITTSFIELD, MA",
+            "WEST TOWNSHEND, VT",
+            "PERU, VT",
+            "MANCHESTER, VT",
+            "BENNINGTON, VT",
+            "POWNAL, VT"
+        ]
+    },
+    {
+        "market": "ALO",
+        "sensors": [
+            "MASON CITY, IA",
+            "SHEFFIELD, IA",
+            "NASHUA, IA",
+            "FREDERIKA, IA",
+            "WATERLOO, IA",
+            "IOWA FALLS, IA"
+        ]
+    },
+    {
+        "market": "ALS",
+        "sensors": [
+            "LA JARA, CO",
+            "RANCHOS DE TAOS, NM",
+            "VALDEZ, NM",
+            "CERRO, NM"
+        ]
+    },
+    {
+        "market": "AMA",
+        "sensors": [
+            "CHEYENNE, OK",
+            "AMARILLO, TX"
+        ]
+    },
+    {
+        "market": "AOO",
+        "sensors": [
+            "OLDTOWN, MD",
+            "PUNXSUTAWNEY, PA",
+            "JOHNSTOWN, PA",
+            "ALTOONA, PA",
+            "STATE COLLEGE, PA"
+        ]
+    },
+    {
+        "market": "AST",
+        "sensors": [
+            "SEASIDE, OR"
+        ]
+    },
+    {
+        "market": "ATL",
+        "sensors": [
+            "GRIFFIN, GA",
+            "COVINGTON, GA",
+            "LAWRENCEVILLE, GA",
+            "JONESBORO, GA",
+            "CARROLLTON, GA",
+            "DOUGLASVILLE, GA",
+            "ATLANTA, GA",
+            "MARIETTA, GA",
+            "CARTERSVILLE, GA",
+            "WALESKA, GA"
+        ]
+    },
+    {
+        "market": "AUS",
+        "sensors": [
+            "AUSTIN, TX"
+        ]
+    },
+    {
+        "market": "AUW",
+        "sensors": [
+            "WAUSAU, WI"
+        ]
+    },
+    {
+        "market": "AVL",
+        "sensors": [
+            "ASHEVILLE, NC"
+        ]
+    },
+    {
+        "market": "AVP",
+        "sensors": [
+            "SCRANTON, PA",
+            "BINGHAMTON, NY"
+        ]
+    },
+    {
+        "market": "BDL",
+        "sensors": [
+            "SALEM, CT",
+            "BOZRAH, CT",
+            "HARTFORD, CT",
+            "COLEBROOK, CT",
+            "CANAAN, CT",
+            "FALLS VILLAGE, CT",
+            "LAKEVILLE, CT",
+            "SPRINGFIELD, MA"
+        ]
+    },
+    {
+        "market": "BDR",
+        "sensors": [
+            "SOUTHAMPTON, NY",
+            "WEST POINT, NY",
+            "POUGHKEEPSIE, NY",
+            "STAMFORD, CT",
+            "BRIDGEPORT, CT",
+            "NEW HAVEN, CT",
+            "WATERBURY, CT"
+        ]
+    },
+    {
+        "market": "BFF",
+        "sensors": [
+            "LUSK, WY",
+            "FLEMING, CO",
+            "OSHKOSH, NE"
+        ]
+    },
+    {
+        "market": "BFL",
+        "sensors": [
+            "BAKERSFIELD, CA"
+        ]
+    },
+    {
+        "market": "BFM",
+        "sensors": [
+            "NEW AUGUSTA, MS",
+            "PASCAGOULA, MS",
+            "MOBILE, AL"
+        ]
+    },
+    {
+        "market": "BGM",
+        "sensors": [
+            "ITHACA, NY",
+            "ELMIRA, NY"
+        ]
+    },
+    {
+        "market": "BGR",
+        "sensors": [
+            "BROWNVILLE JUNCTION, ME",
+            "MADISON, ME",
+            "PROSPECT HARBOR, ME",
+            "BLUE HILL, ME",
+            "ROCKPORT, ME"
+        ]
+    },
+    {
+        "market": "BHM",
+        "sensors": [
+            "BREMEN, AL",
+            "JASPER, AL",
+            "ALLGOOD, AL",
+            "GADSDEN, AL",
+            "ANNISTON, AL",
+            "MOODY, AL",
+            "ALPINE, AL",
+            "BON AIR, AL",
+            "ADGER, AL",
+            "ADAMSVILLE, AL",
+            "BIRMINGHAM, AL",
+            "BRIERFIELD, AL",
+            "BRENT, AL",
+            "TUSCALOOSA, AL"
+        ]
+    },
+    {
+        "market": "BHX",
+        "sensors": [
+            "EUREKA, CA"
+        ]
+    },
+    {
+        "market": "BIL",
+        "sensors": [
+            "RYEGATE, MT",
+            "COLUMBUS, MT",
+            "BEARCREEK, MT",
+            "BILLINGS, MT",
+            "HARDIN, MT",
+            "SAINT XAVIER, MT",
+            "YELLOWSTONE NATIONAL PARK, WY",
+            "POWELL, WY"
+        ]
+    },
+    {
+        "market": "BIS",
+        "sensors": [
+            "BISMARCK, ND"
+        ]
+    },
+    {
+        "market": "BJI",
+        "sensors": [
+            "WALKER, MN",
+            "MARBLE, MN"
+        ]
+    },
+    {
+        "market": "BKW",
+        "sensors": [
+            "LEWISBURG, WV",
+            "PETERSTOWN, WV",
+            "PRINCETON, WV",
+            "NORTHFORK, WV",
+            "NEW RICHMOND, WV",
+            "GLEN FORK, WV",
+            "PAYNESVILLE, WV",
+            "AVONDALE, WV",
+            "JUSTICE, WV",
+            "AMHERSTDALE, WV",
+            "POWELLTON, WV"
+        ]
+    },
+    {
+        "market": "BLI",
+        "sensors": [
+            "BLAINE, WA",
+            "BELLINGHAM, WA",
+            "MOUNT VERNON, WA",
+            "OAK HARBOR, WA",
+            "PORT ANGELES, WA",
+            "EVERETT, WA"
+        ]
+    },
+    {
+        "market": "BNA",
+        "sensors": [
+            "CUMBERLAND CITY, TN",
+            "CLARKSVILLE, TN",
+            "COOKEVILLE, TN",
+            "AUBURNTOWN, TN",
+            "LEBANON, TN",
+            "NASHVILLE, TN",
+            "FRANKLIN, TN",
+            "LEWISBURG, TN",
+            "SHELBYVILLE, TN",
+            "MANCHESTER, TN"
+        ]
+    },
+    {
+        "market": "BOI",
+        "sensors": [
+            "YELLOW PINE, ID",
+            "BANKS, ID",
+            "IDAHO CITY, ID",
+            "BOISE, ID",
+            "CALDWELL, ID",
+            "KING HILL, ID",
+            "SUN VALLEY, ID"
+        ]
+    },
+    {
+        "market": "BOS",
+        "sensors": [
+            "PLYMOUTH, MA",
+            "HAVERHILL, MA",
+            "ESSEX, MA",
+            "BOSTON, MA",
+            "BROCKTON, MA",
+            "LITTLETON, MA"
+        ]
+    },
+    {
+        "market": "BPT",
+        "sensors": [
+            "BEAUMONT, TX"
+        ]
+    },
+    {
+        "market": "BRL",
+        "sensors": [
+            "QUEEN CITY, MO",
+            "ALEXANDRIA, MO"
+        ]
+    },
+    {
+        "market": "BRO",
+        "sensors": [
+            "MCALLEN, TX"
+        ]
+    },
+    {
+        "market": "BTM",
+        "sensors": [
+            "HELENA, MT",
+            "BUTTE, MT",
+            "WILLOW CREEK, MT",
+            "BOZEMAN, MT",
+            "GALLATIN GATEWAY, MT"
+        ]
+    },
+    {
+        "market": "BTR",
+        "sensors": [
+            "OPELOUSAS, LA",
+            "LAFAYETTE, LA",
+            "NEW IBERIA, LA",
+            "MORGAN CITY, LA",
+            "BATON ROUGE, LA",
+            "MOUNT HERMON, LA"
+        ]
+    },
+    {
+        "market": "BTV",
+        "sensors": [
+            "ADIRONDACK, NY",
+            "FRANKLIN, VT",
+            "CAMBRIDGE, VT",
+            "BURLINGTON, VT",
+            "NEW HAVEN, VT"
+        ]
+    },
+    {
+        "market": "BUF",
+        "sensors": [
+            "BUFFALO, NY"
+        ]
+    },
+    {
+        "market": "BWG",
+        "sensors": [
+            "BOWLING GREEN, KY"
+        ]
+    },
+    {
+        "market": "BWI",
+        "sensors": [
+            "BEL AIR, MD",
+            "BALTIMORE, MD",
+            "ANNAPOLIS, MD"
+        ]
+    },
+    {
+        "market": "CAE",
+        "sensors": [
+            "SUMTER, SC",
+            "ORANGEBURG, SC",
+            "PELION, SC",
+            "COLUMBIA, SC",
+            "PEAK, SC"
+        ]
+    },
+    {
+        "market": "CAK",
+        "sensors": [
+            "AKRON, OH",
+            "CANTON, OH",
+            "FAIRVIEW, OH"
+        ]
+    },
+    {
+        "market": "CAR",
+        "sensors": [
+            "STOCKHOLM, ME",
+            "BRIDGEWATER, ME",
+            "MONTICELLO, ME",
+            "ISLAND FALLS, ME"
+        ]
+    },
+    {
+        "market": "CGI",
+        "sensors": [
+            "MCBRIDE, MO",
+            "FREDERICKTOWN, MO",
+            "CAPE GIRARDEAU, MO",
+            "MCGEE, MO",
+            "NEW MADRID, MO",
+            "PADUCAH, KY"
+        ]
+    },
+    {
+        "market": "CHA",
+        "sensors": [
+            "DALTON, GA",
+            "ROME, GA",
+            "CHATTANOOGA, TN"
+        ]
+    },
+    {
+        "market": "CHS",
+        "sensors": [
+            "CHARLESTON, SC"
+        ]
+    },
+    {
+        "market": "CID",
+        "sensors": [
+            "CEDAR RAPIDS, IA",
+            "IOWA CITY, IA",
+            "BARNES CITY, IA"
+        ]
+    },
+    {
+        "market": "CIN",
+        "sensors": [
+            "COVINGTON, KY",
+            "HAMILTON, OH",
+            "CINCINNATI, OH"
+        ]
+    },
+    {
+        "market": "CLE",
+        "sensors": [
+            "CLEVELAND, OH"
+        ]
+    },
+    {
+        "market": "CLT",
+        "sensors": [
+            "ROCK HILL, SC",
+            "LANCASTER, SC",
+            "GASTONIA, NC",
+            "MATTHEWS, NC",
+            "CHARLOTTE, NC",
+            "SALISBURY, NC"
+        ]
+    },
+    {
+        "market": "CLX",
+        "sensors": [
+            "HILTON HEAD ISLAND, SC",
+            "BEAUFORT, SC"
+        ]
+    },
+    {
+        "market": "CMH",
+        "sensors": [
+            "GRANVILLE, OH",
+            "HEATH, OH",
+            "HAYDENVILLE, OH",
+            "COLUMBUS, OH",
+            "WOODSTOCK, OH"
+        ]
+    },
+    {
+        "market": "CMI",
+        "sensors": [
+            "CHAMPAIGN, IL",
+            "TERRE HAUTE, IN"
+        ]
+    },
+    {
+        "market": "CNK",
+        "sensors": [
+            "ALEXANDRIA, NE",
+            "COURTLAND, KS",
+            "MORGANVILLE, KS",
+            "BLUE RAPIDS, KS",
+            "SALINA, KS"
+        ]
+    },
+    {
+        "market": "CON",
+        "sensors": [
+            "WESTMINSTER, VT",
+            "CHESTER, VT",
+            "WALPOLE, NH",
+            "PETERBOROUGH, NH",
+            "NASHUA, NH",
+            "CONCORD, NH",
+            "MANCHESTER, NH",
+            "FREMONT, NH",
+            "PORTSMOUTH, NH",
+            "ROCHESTER, NH",
+            "WOLFEBORO, NH",
+            "NEW HAMPTON, NH",
+            "TAMWORTH, NH",
+            "WEST OSSIPEE, NH"
+        ]
+    },
+    {
+        "market": "COS",
+        "sensors": [
+            "LAKE GEORGE, CO",
+            "CRIPPLE CREEK, CO",
+            "COLORADO SPRINGS, CO",
+            "CANON CITY, CO"
+        ]
+    },
+    {
+        "market": "COU",
+        "sensors": [
+            "CALLAO, MO",
+            "COLUMBIA, MO",
+            "JEFFERSON CITY, MO",
+            "MONTGOMERY CITY, MO"
+        ]
+    },
+    {
+        "market": "CPR",
+        "sensors": [
+            "SHAWNEE, WY",
+            "CASPER, WY",
+            "ALCOVA, WY",
+            "SHIRLEY BASIN, WY"
+        ]
+    },
+    {
+        "market": "CRP",
+        "sensors": [
+            "CORPUS CHRISTI, TX"
+        ]
+    },
+    {
+        "market": "CRW",
+        "sensors": [
+            "VIENNA, WV",
+            "LOONEYVILLE, WV",
+            "MONTGOMERY, WV",
+            "COSTA, WV",
+            "CHARLESTON, WV",
+            "BIG CREEK, WV"
+        ]
+    },
+    {
+        "market": "CSG",
+        "sensors": [
+            "OPELIKA, AL",
+            "COLUMBUS, GA"
+        ]
+    },
+    {
+        "market": "CXY",
+        "sensors": [
+            "LEBANON, PA",
+            "LANCASTER, PA",
+            "YORK, PA",
+            "HARRISBURG, PA",
+            "CARLISLE, PA"
+        ]
+    },
+    {
+        "market": "CYS",
+        "sensors": [
+            "JELM, WY",
+            "CHEYENNE, WY",
+            "FORT COLLINS, CO"
+        ]
+    },
+    {
+        "market": "DAB",
+        "sensors": [
+            "SAINT AUGUSTINE, FL",
+            "FORT MCCOY, FL",
+            "OCALA, FL",
+            "DAYTONA BEACH, FL",
+            "DELAND, FL"
+        ]
+    },
+    {
+        "market": "DAY",
+        "sensors": [
+            "SPRINGFIELD, OH",
+            "DAYTON, OH"
+        ]
+    },
+    {
+        "market": "DCA",
+        "sensors": [
+            "ARLINGTON, VA",
+            "SILVER SPRING, MD",
+            "CHESAPEAKE BEACH, MD",
+            "WALDORF, MD",
+            "COMPTON, MD"
+        ]
+    },
+    {
+        "market": "DDC",
+        "sensors": [
+            "LAKE CITY, KS",
+            "ENGLEWOOD, KS",
+            "PIERCEVILLE, KS",
+            "ROLLA, KS",
+            "FORT SUPPLY, OK"
+        ]
+    },
+    {
+        "market": "DEN",
+        "sensors": [
+            "FORT MORGAN, CO",
+            "GREELEY, CO",
+            "BRIGHTON, CO",
+            "DENVER, CO",
+            "BOULDER, CO",
+            "ROLLINSVILLE, CO",
+            "VAIL, CO"
+        ]
+    },
+    {
+        "market": "DFW",
+        "sensors": [
+            "SHERMAN, TX",
+            "LEONARD, TX",
+            "COMMERCE, TX",
+            "DENTON, TX",
+            "PLANO, TX",
+            "DALLAS, TX",
+            "TERRELL, TX"
+        ]
+    },
+    {
+        "market": "DIK",
+        "sensors": [
+            "DICKINSON, ND"
+        ]
+    },
+    {
+        "market": "DLH",
+        "sensors": [
+            "ELY, MN",
+            "BABBITT, MN",
+            "DULUTH, MN",
+            "WILLOW RIVER, MN"
+        ]
+    },
+    {
+        "market": "DNL",
+        "sensors": [
+            "SWAINSBORO, GA",
+            "SPARTA, GA",
+            "AUGUSTA, GA",
+            "AIKEN, SC"
+        ]
+    },
+    {
+        "market": "DOV",
+        "sensors": [
+            "RIDGELY, MD",
+            "SALISBURY, MD",
+            "POCOMOKE CITY, MD",
+            "DOVER, DE",
+            "MILFORD, DE",
+            "LEWES, DE",
+            "REHOBOTH BEACH, DE",
+            "BETHANY BEACH, DE"
+        ]
+    },
+    {
+        "market": "DRT",
+        "sensors": [
+            "DEL RIO, TX"
+        ]
+    },
+    {
+        "market": "DSM",
+        "sensors": [
+            "ELLSWORTH, IA",
+            "STANHOPE, IA",
+            "AMES, IA",
+            "COOPER, IA",
+            "PERRY, IA",
+            "DES MOINES, IA",
+            "MILO, IA",
+            "HAMILTON, IA",
+            "LOVILIA, IA"
+        ]
+    },
+    {
+        "market": "DTW",
+        "sensors": [
+            "ANN ARBOR, MI",
+            "DETROIT, MI"
+        ]
+    },
+    {
+        "market": "EAU",
+        "sensors": [
+            "EAU CLAIRE, WI"
+        ]
+    },
+    {
+        "market": "EBQ",
+        "sensors": [
+            "DUBUQUE, IA",
+            "PLATTEVILLE, WI",
+            "BLUE RIVER, WI"
+        ]
+    },
+    {
+        "market": "ELK",
+        "sensors": [
+            "MORGANTOWN, WV"
+        ]
+    },
+    {
+        "market": "ELP",
+        "sensors": [
+            "LAS CRUCES, NM",
+            "CHAMBERINO, NM",
+            "EL PASO, TX"
+        ]
+    },
+    {
+        "market": "ELY",
+        "sensors": [
+            "WELLS, NV"
+        ]
+    },
+    {
+        "market": "ERI",
+        "sensors": [
+            "ASHTABULA, OH",
+            "ERIE, PA"
+        ]
+    },
+    {
+        "market": "EUG",
+        "sensors": [
+            "SWEET HOME, OR",
+            "EUGENE, OR",
+            "SOUTH BEACH, OR",
+            "GARDINER, OR",
+            "BEND, OR"
+        ]
+    },
+    {
+        "market": "EVV",
+        "sensors": [
+            "EVANSVILLE, IN"
+        ]
+    },
+    {
+        "market": "EWR",
+        "sensors": [
+            "MORRISTOWN, NJ",
+            "NEWARK, NJ",
+            "NEW BRUNSWICK, NJ",
+            "TRENTON, NJ",
+            "NEW YORK, NY"
+        ]
+    },
+    {
+        "market": "FAR",
+        "sensors": [
+            "WHEATLAND, ND",
+            "FARGO, ND",
+            "DAVENPORT, ND",
+            "MCLEOD, ND",
+            "ABERCROMBIE, ND",
+            "WYNDMERE, ND",
+            "MOORHEAD, MN",
+            "FERGUS FALLS, MN"
+        ]
+    },
+    {
+        "market": "FAT",
+        "sensors": [
+            "FRESNO, CA"
+        ]
+    },
+    {
+        "market": "FCA",
+        "sensors": [
+            "KALISPELL, MT"
+        ]
+    },
+    {
+        "market": "FLG",
+        "sensors": [
+            "TONALEA, AZ",
+            "SUN VALLEY, AZ",
+            "FLAGSTAFF, AZ",
+            "SEDONA, AZ",
+            "PINE, AZ"
+        ]
+    },
+    {
+        "market": "FLO",
+        "sensors": [
+            "GEORGETOWN, SC",
+            "MYRTLE BEACH, SC",
+            "FLORENCE, SC"
+        ]
+    },
+    {
+        "market": "FMN",
+        "sensors": [
+            "TEEC NOS POS, AZ",
+            "ROCK POINT, AZ",
+            "DURANGO, CO",
+            "FARMINGTON, NM",
+            "GALLUP, NM",
+            "JAMESTOWN, NM"
+        ]
+    },
+    {
+        "market": "FNT",
+        "sensors": [
+            "SAGINAW, MI",
+            "FLINT, MI",
+            "FOSTORIA, MI",
+            "LAKE ORION, MI",
+            "ATTICA, MI",
+            "YALE, MI",
+            "MEMPHIS, MI"
+        ]
+    },
+    {
+        "market": "FSD",
+        "sensors": [
+            "GARY, SD",
+            "TORONTO, SD",
+            "BRIDGEWATER, SD",
+            "UTICA, SD",
+            "CENTERVILLE, SD",
+            "LENNOX, SD",
+            "SIOUX FALLS, SD",
+            "SIOUX CENTER, IA"
+        ]
+    },
+    {
+        "market": "FSM",
+        "sensors": [
+            "FAYETTEVILLE, AR",
+            "FORT SMITH, AR"
+        ]
+    },
+    {
+        "market": "FTW",
+        "sensors": [
+            "FORT WORTH, TX"
+        ]
+    },
+    {
+        "market": "FWA",
+        "sensors": [
+            "WARSAW, IN",
+            "FORT WAYNE, IN",
+            "MUNCIE, IN",
+            "EDON, OH"
+        ]
+    },
+    {
+        "market": "GEG",
+        "sensors": [
+            "SPOKANE, WA",
+            "SANDPOINT, ID",
+            "POST FALLS, ID",
+            "WORLEY, ID",
+            "WALLACE, ID",
+            "CALDER, ID"
+        ]
+    },
+    {
+        "market": "GFK",
+        "sensors": [
+            "SARLES, ND",
+            "HAMILTON, ND",
+            "GRAFTON, ND",
+            "GRAND FORKS, ND",
+            "PETERSBURG, ND",
+            "CRARY, ND"
+        ]
+    },
+    {
+        "market": "GGW",
+        "sensors": [
+            "HOGELAND, MT",
+            "WHITETAIL, MT",
+            "NASHUA, MT",
+            "JORDAN, MT"
+        ]
+    },
+    {
+        "market": "GJT",
+        "sensors": [
+            "LA SAL, UT",
+            "ASPEN, CO",
+            "DELTA, CO",
+            "GRAND JUNCTION, CO"
+        ]
+    },
+    {
+        "market": "GLD",
+        "sensors": [
+            "YUMA, CO"
+        ]
+    },
+    {
+        "market": "GPT",
+        "sensors": [
+            "HATTIESBURG, MS",
+            "DIAMONDHEAD, MS",
+            "GULFPORT, MS"
+        ]
+    },
+    {
+        "market": "GRB",
+        "sensors": [
+            "WAUSAUKEE, WI",
+            "COLEMAN, WI",
+            "MAPLEWOOD, WI",
+            "GREEN BAY, WI",
+            "APPLETON, WI"
+        ]
+    },
+    {
+        "market": "GRI",
+        "sensors": [
+            "SPALDING, NE",
+            "FARWELL, NE",
+            "PALMER, NE",
+            "GRAND ISLAND, NE",
+            "HASTINGS, NE"
+        ]
+    },
+    {
+        "market": "GRR",
+        "sensors": [
+            "GRAND RAPIDS, MI",
+            "KALAMAZOO, MI",
+            "BATTLE CREEK, MI"
+        ]
+    },
+    {
+        "market": "GSO",
+        "sensors": [
+            "WHITE PLAINS, NC",
+            "LEXINGTON, NC",
+            "WINSTON SALEM, NC",
+            "GREENSBORO, NC",
+            "BURLINGTON, NC"
+        ]
+    },
+    {
+        "market": "GSP",
+        "sensors": [
+            "GREENWOOD, SC",
+            "ANDERSON, SC",
+            "SENECA, SC",
+            "GREENVILLE, SC",
+            "SPARTANBURG, SC",
+            "GAFFNEY, SC"
+        ]
+    },
+    {
+        "market": "GTB",
+        "sensors": [
+            "WATERTOWN, NY"
+        ]
+    },
+    {
+        "market": "GTF",
+        "sensors": [
+            "GALATA, MT",
+            "AUGUSTA, MT",
+            "SUN RIVER, MT",
+            "GREAT FALLS, MT",
+            "LEWISTOWN, MT"
+        ]
+    },
+    {
+        "market": "HON",
+        "sensors": [
+            "CHAMBERLAIN, SD",
+            "MOUNT VERNON, SD"
+        ]
+    },
+    {
+        "market": "HSE",
+        "sensors": [
+            "COLUMBIA, NC"
+        ]
+    },
+    {
+        "market": "HSV",
+        "sensors": [
+            "FLORENCE, AL",
+            "DECATUR, AL",
+            "HUNTSVILLE, AL",
+            "ARAB, AL",
+            "CULLMAN, AL",
+            "FAYETTEVILLE, TN"
+        ]
+    },
+    {
+        "market": "HTL",
+        "sensors": [
+            "MIDLAND, MI"
+        ]
+    },
+    {
+        "market": "HTS",
+        "sensors": [
+            "ASHLAND, KY",
+            "MYRA, WV",
+            "HUNTINGTON, WV"
+        ]
+    },
+    {
+        "market": "IAD",
+        "sensors": [
+            "FREDERICKSBURG, VA",
+            "WARRENTON, VA",
+            "RILEYVILLE, VA",
+            "MARTINSBURG, WV",
+            "HAGERSTOWN, MD",
+            "FREDERICK, MD"
+        ]
+    },
+    {
+        "market": "IAH",
+        "sensors": [
+            "HUNTSVILLE, TX",
+            "HOUSTON, TX"
+        ]
+    },
+    {
+        "market": "ICT",
+        "sensors": [
+            "SOUTH HUTCHINSON, KS",
+            "WICHITA, KS",
+            "NASHVILLE, KS"
+        ]
+    },
+    {
+        "market": "ICX",
+        "sensors": [
+            "PIOCHE, NV",
+            "HENRIEVILLE, UT",
+            "TROPIC, UT",
+            "CEDAR CITY, UT",
+            "VIRGIN, UT",
+            "TOQUERVILLE, UT",
+            "SAINT GEORGE, UT"
+        ]
+    },
+    {
+        "market": "ILG",
+        "sensors": [
+            "WILMINGTON, DE",
+            "TOWNSEND, DE",
+            "DOWNINGTOWN, PA"
+        ]
+    },
+    {
+        "market": "ILM",
+        "sensors": [
+            "NEW BERN, NC",
+            "MIDWAY PARK, NC",
+            "WILMINGTON, NC"
+        ]
+    },
+    {
+        "market": "IND",
+        "sensors": [
+            "BLOOMINGTON, IN",
+            "LAFAYETTE, IN",
+            "CRAWFORDSVILLE, IN",
+            "BAINBRIDGE, IN",
+            "DANVILLE, IN",
+            "INDIANAPOLIS, IN",
+            "GREENFIELD, IN",
+            "CARTHAGE, IN",
+            "ANDERSON, IN",
+            "ATLANTA, IN",
+            "KOKOMO, IN",
+            "KIRKLIN, IN",
+            "FRANKFORT, IN"
+        ]
+    },
+    {
+        "market": "IPT",
+        "sensors": [
+            "WILLIAMSPORT, PA",
+            "SUNBURY, PA",
+            "BLOOMSBURG, PA"
+        ]
+    },
+    {
+        "market": "ISN",
+        "sensors": [
+            "FAIRVIEW, MT"
+        ]
+    },
+    {
+        "market": "JAN",
+        "sensors": [
+            "GREENVILLE, MS",
+            "VICKSBURG, MS",
+            "JACKSON, MS",
+            "BROOKHAVEN, MS",
+            "MOUNT OLIVE, MS"
+        ]
+    },
+    {
+        "market": "JAX",
+        "sensors": [
+            "BRUNSWICK, GA",
+            "LAKE CITY, FL",
+            "FERNANDINA BEACH, FL",
+            "JACKSONVILLE, FL",
+            "GAINESVILLE, FL"
+        ]
+    },
+    {
+        "market": "JKL",
+        "sensors": [
+            "LONDON, KY",
+            "HAZARD, KY"
+        ]
+    },
+    {
+        "market": "JMS",
+        "sensors": [
+            "SAINT MICHAEL, ND",
+            "NEW ROCKFORD, ND",
+            "MEDINA, ND",
+            "JAMESTOWN, ND",
+            "MONTPELIER, ND"
+        ]
+    },
+    {
+        "market": "LAN",
+        "sensors": [
+            "LANSING, MI",
+            "JACKSON, MI"
+        ]
+    },
+    {
+        "market": "LAS",
+        "sensors": [
+            "LAS VEGAS, NV",
+            "LAUGHLIN, NV",
+            "KINGMAN, AZ",
+            "BULLHEAD CITY, AZ"
+        ]
+    },
+    {
+        "market": "LAX",
+        "sensors": [
+            "VAN NUYS, CA",
+            "LOS ANGELES, CA",
+            "ANAHEIM, CA",
+            "SAN JUAN CAPISTRANO, CA",
+            "LA VERNE, CA",
+            "SAN BERNARDINO, CA"
+        ]
+    },
+    {
+        "market": "LBB",
+        "sensors": [
+            "CLOVIS, NM",
+            "LUBBOCK, TX"
+        ]
+    },
+    {
+        "market": "LBF",
+        "sensors": [
+            "NORTH PLATTE, NE"
+        ]
+    },
+    {
+        "market": "LCH",
+        "sensors": [
+            "PITKIN, LA",
+            "LAKE CHARLES, LA",
+            "CROWLEY, LA",
+            "ABBEVILLE, LA"
+        ]
+    },
+    {
+        "market": "LEX",
+        "sensors": [
+            "BRADFORDSVILLE, KY",
+            "LEXINGTON, KY",
+            "FRANKFORT, KY",
+            "CHAPLIN, KY"
+        ]
+    },
+    {
+        "market": "LGA",
+        "sensors": [
+            "ASBURY PARK, NJ",
+            "TOMS RIVER, NJ",
+            "FAIR HAVEN, NJ"
+        ]
+    },
+    {
+        "market": "LIT",
+        "sensors": [
+            "RUSSELLVILLE, AR",
+            "VILONIA, AR",
+            "LITTLE ROCK, AR",
+            "HOT SPRINGS NATIONAL PARK, AR",
+            "WHITE HALL, AR",
+            "MONTICELLO, AR",
+            "BATESVILLE, AR"
+        ]
+    },
+    {
+        "market": "LND",
+        "sensors": [
+            "DUBOIS, WY",
+            "DANIEL, WY",
+            "BIG PINEY, WY",
+            "LA BARGE, WY",
+            "OPAL, WY",
+            "GRANGER, WY",
+            "ROCK SPRINGS, WY",
+            "MCKINNON, WY"
+        ]
+    },
+    {
+        "market": "LNK",
+        "sensors": [
+            "BEAVER CROSSING, NE",
+            "LINCOLN, NE",
+            "STELLA, NE",
+            "FIRTH, NE",
+            "CRAB ORCHARD, NE"
+        ]
+    },
+    {
+        "market": "LRD",
+        "sensors": [
+            "LAREDO, TX"
+        ]
+    },
+    {
+        "market": "LWS",
+        "sensors": [
+            "PULLMAN, WA",
+            "PRINCETON, ID",
+            "GENESEE, ID",
+            "FERDINAND, ID"
+        ]
+    },
+    {
+        "market": "LYH",
+        "sensors": [
+            "LYNCHBURG, VA",
+            "CHARLOTTESVILLE, VA"
+        ]
+    },
+    {
+        "market": "MAF",
+        "sensors": [
+            "MIDLAND, TX"
+        ]
+    },
+    {
+        "market": "MBX",
+        "sensors": [
+            "SAINT JOHN, ND",
+            "MINOT AFB, ND",
+            "CHURCHS FERRY, ND"
+        ]
+    },
+    {
+        "market": "MCI",
+        "sensors": [
+            "KANSAS CITY, KS",
+            "OVERLAND PARK, KS",
+            "SAINT JOSEPH, MO",
+            "KANSAS CITY, MO"
+        ]
+    },
+    {
+        "market": "MCN",
+        "sensors": [
+            "MACON, GA"
+        ]
+    },
+    {
+        "market": "MCO",
+        "sensors": [
+            "ORLANDO, FL",
+            "COCOA, FL",
+            "MELBOURNE, FL"
+        ]
+    },
+    {
+        "market": "MEI",
+        "sensors": [
+            "PHILADELPHIA, MS",
+            "MERIDIAN, MS",
+            "AKRON, AL",
+            "ALICEVILLE, AL",
+            "PENNINGTON, AL"
+        ]
+    },
+    {
+        "market": "MEM",
+        "sensors": [
+            "NEWPORT, AR",
+            "PEACH ORCHARD, AR",
+            "JONESBORO, AR",
+            "BURDETTE, AR",
+            "SOUTHAVEN, MS",
+            "DUNDEE, MS",
+            "MOUND BAYOU, MS",
+            "MEMPHIS, TN"
+        ]
+    },
+    {
+        "market": "MFD",
+        "sensors": [
+            "GREEN SPRINGS, OH",
+            "MANSFIELD, OH",
+            "MARION, OH"
+        ]
+    },
+    {
+        "market": "MFR",
+        "sensors": [
+            "MYRTLE CREEK, OR",
+            "PORT ORFORD, OR",
+            "GRANTS PASS, OR",
+            "WHITE CITY, OR",
+            "KLAMATH FALLS, OR",
+            "BROOKINGS, OR"
+        ]
+    },
+    {
+        "market": "MGM",
+        "sensors": [
+            "ALEXANDER CITY, AL",
+            "MONTGOMERY, AL",
+            "ALBERTA, AL",
+            "MONROEVILLE, AL"
+        ]
+    },
+    {
+        "market": "MIA",
+        "sensors": [
+            "FORT LAUDERDALE, FL",
+            "MIAMI, FL",
+            "HOMESTEAD, FL",
+            "NAPLES, FL"
+        ]
+    },
+    {
+        "market": "MKE",
+        "sensors": [
+            "SHEBOYGAN FALLS, WI",
+            "MILWAUKEE, WI",
+            "RACINE, WI",
+            "HONEY CREEK, WI",
+            "WAUKESHA, WI"
+        ]
+    },
+    {
+        "market": "MKG",
+        "sensors": [
+            "MUSKEGON, MI"
+        ]
+    },
+    {
+        "market": "MKL",
+        "sensors": [
+            "CORINTH, MS"
+        ]
+    },
+    {
+        "market": "MLI",
+        "sensors": [
+            "DAVENPORT, IA"
+        ]
+    },
+    {
+        "market": "MLU",
+        "sensors": [
+            "ARKANSAS CITY, AR",
+            "URBANA, AR",
+            "MONROE, LA",
+            "ALEXANDRIA, LA"
+        ]
+    },
+    {
+        "market": "MON",
+        "sensors": [
+            "ALBANY, VT",
+            "SAINT JOHNSBURY, VT",
+            "MONTPELIER, VT",
+            "CHELSEA, VT",
+            "NORTH THETFORD, VT",
+            "NORWICH, VT",
+            "HARTFORD, VT",
+            "HARTLAND, VT",
+            "SOUTH WOODSTOCK, VT",
+            "WOODSTOCK, VT",
+            "BRIDGEWATER, VT",
+            "PLYMOUTH, VT",
+            "KILLINGTON, VT",
+            "LINCOLN, NH"
+        ]
+    },
+    {
+        "market": "MSN",
+        "sensors": [
+            "JANESVILLE, WI",
+            "JOHNSON CREEK, WI",
+            "PACKWAUKEE, WI",
+            "DOYLESTOWN, WI",
+            "MADISON, WI",
+            "HOLLANDALE, WI"
+        ]
+    },
+    {
+        "market": "MSO",
+        "sensors": [
+            "MISSOULA, MT"
+        ]
+    },
+    {
+        "market": "MSP",
+        "sensors": [
+            "WYOMING, MN",
+            "YOUNG AMERICA, MN",
+            "MAPLE PLAIN, MN",
+            "MINNEAPOLIS, MN",
+            "HASTINGS, MN",
+            "CANNON FALLS, MN",
+            "EAST ELLSWORTH, WI"
+        ]
+    },
+    {
+        "market": "MSY",
+        "sensors": [
+            "HOUMA, LA",
+            "HAMMOND, LA",
+            "COVINGTON, LA",
+            "SLIDELL, LA",
+            "NEW ORLEANS, LA"
+        ]
+    },
+    {
+        "market": "OFK",
+        "sensors": [
+            "CREIGHTON, NE",
+            "WAUSA, NE",
+            "WAYNE, NE",
+            "NORFOLK, NE",
+            "COLUMBUS, NE"
+        ]
+    },
+    {
+        "market": "OKC",
+        "sensors": [
+            "ENID, OK",
+            "STILLWATER, OK",
+            "ELMORE CITY, OK",
+            "MOUNTAIN VIEW, OK",
+            "ALBERT, OK",
+            "UNION CITY, OK",
+            "OKLAHOMA CITY, OK",
+            "NORMAN, OK",
+            "SHAWNEE, OK"
+        ]
+    },
+    {
+        "market": "OLM",
+        "sensors": [
+            "UNION, WA",
+            "OLYMPIA, WA",
+            "NEILTON, WA",
+            "CURTIS, WA"
+        ]
+    },
+    {
+        "market": "OMA",
+        "sensors": [
+            "FREMONT, NE",
+            "OMAHA, NE",
+            "NEBRASKA CITY, NE",
+            "COUNCIL BLUFFS, IA",
+            "VILLISCA, IA"
+        ]
+    },
+    {
+        "market": "ORD",
+        "sensors": [
+            "ZION, IL",
+            "WADSWORTH, IL",
+            "CHICAGO, IL",
+            "CRETE, IL",
+            "AURORA, IL",
+            "VERONA, IL",
+            "GARY, IN",
+            "CEDAR LAKE, IN"
+        ]
+    },
+    {
+        "market": "ORF",
+        "sensors": [
+            "SUNBURY, NC",
+            "ELIZABETH CITY, NC",
+            "JARVISBURG, NC",
+            "NORFOLK, VA"
+        ]
+    },
+    {
+        "market": "ORN",
+        "sensors": [
+            "CHESTERFIELD, NH",
+            "WEST TOWNSEND, MA",
+            "NORTH UXBRIDGE, MA",
+            "WORCESTER, MA",
+            "BARRE, MA",
+            "GREENFIELD, MA",
+            "BRATTLEBORO, VT"
+        ]
+    },
+    {
+        "market": "PBI",
+        "sensors": [
+            "FORT PIERCE, FL",
+            "WEST PALM BEACH, FL"
+        ]
+    },
+    {
+        "market": "PDT",
+        "sensors": [
+            "MILTON FREEWATER, OR"
+        ]
+    },
+    {
+        "market": "PDX",
+        "sensors": [
+            "VANCOUVER, WA",
+            "PORTLAND, OR",
+            "RHODODENDRON, OR",
+            "EAGLE CREEK, OR",
+            "BEAVERCREEK, OR"
+        ]
+    },
+    {
+        "market": "PHL",
+        "sensors": [
+            "LEVITTOWN, PA",
+            "PHILADELPHIA, PA",
+            "VALLEY FORGE, PA",
+            "CAMDEN, NJ",
+            "VINELAND, NJ"
+        ]
+    },
+    {
+        "market": "PHX",
+        "sensors": [
+            "YOUNG, AZ",
+            "CIBECUE, AZ",
+            "PHOENIX, AZ",
+            "TORTILLA FLAT, AZ",
+            "GLOBE, AZ",
+            "FORT APACHE, AZ"
+        ]
+    },
+    {
+        "market": "PIA",
+        "sensors": [
+            "PEORIA, IL",
+            "BLOOMINGTON, IL"
+        ]
+    },
+    {
+        "market": "PIH",
+        "sensors": [
+            "TWIN FALLS, ID",
+            "ROCKLAND, ID",
+            "AMERICAN FALLS, ID",
+            "POCATELLO, ID",
+            "SWANLAKE, ID",
+            "GEORGETOWN, ID",
+            "CONDA, ID",
+            "IDAHO FALLS, ID",
+            "ASHTON, ID",
+            "PARK VALLEY, UT",
+            "JACKSON, WY",
+            "FREEDOM, WY",
+            "GROVER, WY",
+            "AUBURN, WY",
+            "FAIRVIEW, WY",
+            "SMOOT, WY",
+            "COKEVILLE, WY"
+        ]
+    },
+    {
+        "market": "PIR",
+        "sensors": [
+            "ONIDA, SD",
+            "LEBANON, SD",
+            "WHITEHORSE, SD",
+            "GLENCROSS, SD"
+        ]
+    },
+    {
+        "market": "PIT",
+        "sensors": [
+            "NEW MANCHESTER, WV",
+            "STEUBENVILLE, OH",
+            "BEAVER FALLS, PA",
+            "BUTLER, PA",
+            "PITTSBURGH, PA"
+        ]
+    },
+    {
+        "market": "PNS",
+        "sensors": [
+            "PENSACOLA, FL"
+        ]
+    },
+    {
+        "market": "PRC",
+        "sensors": [
+            "PRESCOTT, AZ",
+            "WICKENBURG, AZ",
+            "LAKE HAVASU CITY, AZ"
+        ]
+    },
+    {
+        "market": "PUB",
+        "sensors": [
+            "WALSENBURG, CO",
+            "PUEBLO, CO",
+            "BOONE, CO"
+        ]
+    },
+    {
+        "market": "PUC",
+        "sensors": [
+            "FORT DUCHESNE, UT",
+            "VERNAL, UT",
+            "ELMO, UT",
+            "MANTI, UT",
+            "AURORA, UT"
+        ]
+    },
+    {
+        "market": "PVD",
+        "sensors": [
+            "MYSTIC, CT",
+            "NEWPORT, RI",
+            "PROVIDENCE, RI",
+            "ROCKVILLE, RI",
+            "BRADFORD, RI"
+        ]
+    },
+    {
+        "market": "PWM",
+        "sensors": [
+            "SILVER LAKE, NH",
+            "SAINT GEORGE, ME",
+            "AUGUSTA, ME",
+            "AUBURN, ME",
+            "FREEPORT, ME",
+            "PORTLAND, ME",
+            "KENNEBUNK, ME",
+            "CORNISH, ME"
+        ]
+    },
+    {
+        "market": "RAP",
+        "sensors": [
+            "PRAIRIE CITY, SD",
+            "QUINN, SD",
+            "RAPID CITY, SD",
+            "HOT SPRINGS, SD",
+            "WOUNDED KNEE, SD"
+        ]
+    },
+    {
+        "market": "RDD",
+        "sensors": [
+            "REDDING, CA"
+        ]
+    },
+    {
+        "market": "RDU",
+        "sensors": [
+            "BEAR CREEK, NC",
+            "FAYETTEVILLE, NC",
+            "DURHAM, NC",
+            "RALEIGH, NC",
+            "SMITHFIELD, NC",
+            "GOLDSBORO, NC",
+            "ROCKY MOUNT, NC",
+            "WILSON, NC",
+            "GREENVILLE, NC"
+        ]
+    },
+    {
+        "market": "RFD",
+        "sensors": [
+            "ROCKFORD, IL"
+        ]
+    },
+    {
+        "market": "RIC",
+        "sensors": [
+            "RICHMOND, VA"
+        ]
+    },
+    {
+        "market": "RNO",
+        "sensors": [
+            "RENO, NV",
+            "CARSON CITY, NV"
+        ]
+    },
+    {
+        "market": "ROA",
+        "sensors": [
+            "ROANOKE, VA",
+            "EAGLE ROCK, VA"
+        ]
+    },
+    {
+        "market": "ROC",
+        "sensors": [
+            "ROCHESTER, NY"
+        ]
+    },
+    {
+        "market": "ROW",
+        "sensors": [
+            "HOBBS, NM"
+        ]
+    },
+    {
+        "market": "RST",
+        "sensors": [
+            "MEDFORD, MN",
+            "ROCHESTER, MN",
+            "PETERSON, MN",
+            "BURT, IA"
+        ]
+    },
+    {
+        "market": "SAC",
+        "sensors": [
+            "SACRAMENTO, CA",
+            "STOCKTON, CA",
+            "MODESTO, CA"
+        ]
+    },
+    {
+        "market": "SAF",
+        "sensors": [
+            "MILLS, NM",
+            "MOUNTAINAIR, NM",
+            "CERRILLOS, NM",
+            "SAN JOSE, NM",
+            "SANTA FE, NM",
+            "LOS ALAMOS, NM",
+            "COYOTE, NM",
+            "CHIMAYO, NM",
+            "VADITO, NM"
+        ]
+    },
+    {
+        "market": "SAN",
+        "sensors": [
+            "PALM SPRINGS, CA",
+            "SAN DIEGO, CA",
+            "JAMUL, CA"
+        ]
+    },
+    {
+        "market": "SAT",
+        "sensors": [
+            "SAN ANTONIO, TX"
+        ]
+    },
+    {
+        "market": "SAV",
+        "sensors": [
+            "SAVANNAH, GA",
+            "STATESBORO, GA",
+            "COLLINS, GA"
+        ]
+    },
+    {
+        "market": "SBA",
+        "sensors": [
+            "SANTA BARBARA, CA"
+        ]
+    },
+    {
+        "market": "SBN",
+        "sensors": [
+            "BEVERLY SHORES, IN",
+            "BOONE GROVE, IN",
+            "SOUTH BEND, IN",
+            "ELKHART, IN"
+        ]
+    },
+    {
+        "market": "SDF",
+        "sensors": [
+            "BETHLEHEM, KY",
+            "SHELBYVILLE, KY",
+            "LA GRANGE, KY",
+            "LOUISVILLE, KY",
+            "BLOOMFIELD, KY",
+            "FAIRFIELD, KY",
+            "COXS CREEK, KY",
+            "BARDSTOWN, KY",
+            "CLARKSVILLE, IN"
+        ]
+    },
+    {
+        "market": "SEA",
+        "sensors": [
+            "SEATTLE, WA",
+            "TACOMA, WA",
+            "SKYKOMISH, WA"
+        ]
+    },
+    {
+        "market": "SFO",
+        "sensors": [
+            "SANTA ROSA, CA",
+            "SAN FRANCISCO, CA",
+            "SAN MATEO, CA",
+            "SAN JOSE, CA"
+        ]
+    },
+    {
+        "market": "SGF",
+        "sensors": [
+            "JOPLIN, MO",
+            "SPRINGFIELD, MO",
+            "BRANSON, MO",
+            "MOUNTAIN HOME, AR",
+            "GEPP, AR"
+        ]
+    },
+    {
+        "market": "SHR",
+        "sensors": [
+            "LODGE GRASS, MT",
+            "BURLINGTON, WY",
+            "RANCHESTER, WY",
+            "SHERIDAN, WY",
+            "GILLETTE, WY"
+        ]
+    },
+    {
+        "market": "SHV",
+        "sensors": [
+            "TEXARKANA, TX",
+            "SCROGGINS, TX",
+            "TYLER, TX",
+            "LONGVIEW, TX",
+            "HENDERSON, TX",
+            "NACOGDOCHES, TX",
+            "LUFKIN, TX",
+            "GARLAND CITY, AR",
+            "SARATOGA, AR",
+            "SHREVEPORT, LA",
+            "JAMESTOWN, LA"
+        ]
+    },
+    {
+        "market": "SJT",
+        "sensors": [
+            "SAN ANGELO, TX"
+        ]
+    },
+    {
+        "market": "SLC",
+        "sensors": [
+            "FRONTIER, WY",
+            "DIAMONDVILLE, WY",
+            "HOWELL, UT",
+            "LOGAN, UT",
+            "OGDEN, UT",
+            "SALT LAKE CITY, UT",
+            "PROVO, UT",
+            "HANNA, UT",
+            "EVANSTON, WY",
+            "MONTELLO, NV"
+        ]
+    },
+    {
+        "market": "SLE",
+        "sensors": [
+            "SAINT PAUL, OR",
+            "LAFAYETTE, OR",
+            "AMITY, OR",
+            "SALEM, OR",
+            "ALBANY, OR"
+        ]
+    },
+    {
+        "market": "SPI",
+        "sensors": [
+            "SPRINGFIELD, IL"
+        ]
+    },
+    {
+        "market": "SPS",
+        "sensors": [
+            "DUNCAN, OK",
+            "GERONIMO, OK",
+            "FORT SILL, OK",
+            "WICHITA FALLS, TX"
+        ]
+    },
+    {
+        "market": "STC",
+        "sensors": [
+            "LITTLE FALLS, MN",
+            "SAINT CLOUD, MN",
+            "SOUTH HAVEN, MN",
+            "MONTICELLO, MN"
+        ]
+    },
+    {
+        "market": "STL",
+        "sensors": [
+            "MOSCOW MILLS, MO",
+            "SAINT LOUIS, MO",
+            "LONEDELL, MO",
+            "BELLEVILLE, IL"
+        ]
+    },
+    {
+        "market": "SUX",
+        "sensors": [
+            "SOUTH SIOUX CITY, NE",
+            "SIOUX CITY, IA",
+            "POMEROY, IA"
+        ]
+    },
+    {
+        "market": "SVC",
+        "sensors": [
+            "SAN SIMON, AZ",
+            "SILVER CITY, NM",
+            "ARREY, NM"
+        ]
+    },
+    {
+        "market": "SYR",
+        "sensors": [
+            "UTICA, NY",
+            "SYRACUSE, NY",
+            "AUBURN, NY"
+        ]
+    },
+    {
+        "market": "TLH",
+        "sensors": [
+            "PANAMA CITY, FL",
+            "TALLAHASSEE, FL",
+            "MONTICELLO, FL",
+            "LEE, FL"
+        ]
+    },
+    {
+        "market": "TOL",
+        "sensors": [
+            "TOLEDO, OH",
+            "BEAVERDAM, OH"
+        ]
+    },
+    {
+        "market": "TOP",
+        "sensors": [
+            "MANHATTAN, KS",
+            "TOPEKA, KS",
+            "LAWRENCE, KS",
+            "UNIONTOWN, KS"
+        ]
+    },
+    {
+        "market": "TPA",
+        "sensors": [
+            "LAKELAND, FL",
+            "FORT MYERS, FL",
+            "SARASOTA, FL",
+            "CLEARWATER, FL",
+            "TAMPA, FL",
+            "SAINT PETERSBURG, FL"
+        ]
+    },
+    {
+        "market": "TRI",
+        "sensors": [
+            "GREENEVILLE, TN",
+            "JOHNSON CITY, TN",
+            "KINGSPORT, TN",
+            "BRISTOL, TN",
+            "APPALACHIA, VA"
+        ]
+    },
+    {
+        "market": "TUL",
+        "sensors": [
+            "PARSONS, KS",
+            "OSWEGO, KS",
+            "TULSA, OK",
+            "PRYOR, OK",
+            "MUSKOGEE, OK"
+        ]
+    },
+    {
+        "market": "TUP",
+        "sensors": [
+            "OXFORD, MS",
+            "TUPELO, MS",
+            "SLATE SPRING, MS",
+            "COLUMBUS, MS"
+        ]
+    },
+    {
+        "market": "TUS",
+        "sensors": [
+            "TUCSON, AZ",
+            "WILLCOX, AZ",
+            "SIERRA VISTA, AZ",
+            "DOUGLAS, AZ",
+            "FORT THOMAS, AZ"
+        ]
+    },
+    {
+        "market": "TVC",
+        "sensors": [
+            "TRAVERSE CITY, MI"
+        ]
+    },
+    {
+        "market": "TYS",
+        "sensors": [
+            "OAK RIDGE, TN",
+            "KNOXVILLE, TN",
+            "MARYVILLE, TN",
+            "PIGEON FORGE, TN",
+            "MORRISTOWN, TN"
+        ]
+    },
+    {
+        "market": "UIN",
+        "sensors": [
+            "MONROE CITY, MO"
+        ]
+    },
+    {
+        "market": "VCT",
+        "sensors": [
+            "VICTORIA, TX"
+        ]
+    },
+    {
+        "market": "VTN",
+        "sensors": [
+            "OKREEK, SD",
+            "BURKE, SD",
+            "NEWPORT, NE"
+        ]
+    },
+    {
+        "market": "WMC",
+        "sensors": [
+            "WINNEMUCCA, NV",
+            "ELKO, NV"
+        ]
+    },
+    {
+        "market": "YKM",
+        "sensors": [
+            "EAST WENATCHEE, WA",
+            "YAKIMA, WA"
+        ]
+    },
+    {
+        "market": "YNG",
+        "sensors": [
+            "YOUNGSTOWN, OH",
+            "NEW CASTLE, PA"
+        ]
+    },
+    {
+        "market": "YUM",
+        "sensors": [
+            "SEELEY, CA",
+            "YUMA, AZ"
+        ]
+    },
+    {
+        "market": "APN",
+        "sensors": [
+            "DE TOUR VILLAGE, MI",
+            "BRIMLEY, MI",
+            "HILLMAN, MI"
+        ]
+    },
+    {
+        "market": "BNO",
+        "sensors": [
+            "DREWSEY, OR",
+            "FIELDS, OR",
+            "RILEY, OR"
+        ]
+    },
+    {
+        "market": "JHW",
+        "sensors": [
+            "OLEAN, NY",
+            "HORNELL, NY",
+            "PORT ALLEGANY, PA"
+        ]
+    },
+    {
+        "market": "INL",
+        "sensors": [
+            "BAUDETTE, MN",
+            "BIRCHDALE, MN",
+            "LITTLEFORK, MN"
+        ]
+    },
+    {
+        "market": "EYW",
+        "sensors": [
+            "CHOKOLOSKEE, FL"
+        ]
+    },
+    {
+        "market": "MLS",
+        "sensors": [
+            "EKALAKA, MT",
+            "FORSYTH, MT",
+            "TERRY, MT"
+        ]
+    }
+]

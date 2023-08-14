@@ -1,0 +1,368 @@
+{% extends "snippets/layouts/layout_general.html" %}
+
+
+{% block links %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/profile.css') }}">
+{% endblock links %}
+
+
+{% block account_info %}
+<div class='content_others'>
+    <div class="container bootstrap snippet">
+        <div class="panel-body inf-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- TODO Add option to choose profil picture -->
+                    <img class="img-circle img-thumbnail isTooltip" style="width: 350px;"
+                            src="{{ url_for('static', filename='icons/profile/profile_picture.png') }}" alt="profile icon"><br><br>
+                    <h5 class="text-center"><b>Account Information</b></h5><br>
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-responsive table-user-information">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Username
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ session.get('username') }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Email
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ session.get('email') }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Name
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ account_info.get('first_name') }}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Lastname
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ account_info.get('last_name') }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Created
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ account_info.get('registry_date') }}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><br>
+                </div>
+
+                <div class="col-md-6"><br>
+                    <h5 class="text-center"><b>MyAllergy Information</b></h5><br>
+                    <strong class="profile-color">Allergy Data</strong><br>
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-responsive table-user-information">
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        Your gender
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ allergy_info.get('allergy_data').get('gender') }}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Family member that has a history of allergy
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ allergy_info.get('allergy_data').get('family_history') }}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Allergic Rhinitis
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ allergy_info.get('allergy_data').get('allergic_rhinitis') }}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Allergic Asthma
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ allergy_info.get('allergy_data').get('allergic_asthma') }}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Allergic Conjuctivitis
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ allergy_info.get('allergy_data').get('allergic_conjunctivitis') }}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        How often my allergy affects me
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ allergy_info.get('allergy_data').get('allergy_frequency') }}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Allergy Affects
+                                        <br><br>
+                                        <ul class="list-group">
+                                            {% for element in range(0, allergy_affection_list_len, 1) %}
+                                            <li class="list-group-item list-group-item-info">
+                                                {{ allergy_info.get('allergy_data').get('allergy_affection')[element] }}
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Way of receiving Immunotherapy
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ allergy_info.get('allergy_data').get('immunotherapy') }}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Date started receiving Immunotherapy
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ allergy_info.get('allergy_data').get('immunotherapy_start_date') }}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Days a week of receiving medicines
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ allergy_info.get('allergy_data').get('medicine_days') }}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Weeks of receiving medicines
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ allergy_info.get('allergy_data').get('medicine_weeks') }}
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <strong class="profile-color">My Symptoms</strong><br>
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-responsive table-user-information">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <ul class="list-group">
+                                            {% for element in range(0, symptoms_list_len, 1) %}
+                                            <li class="list-group-item list-group-item-info">
+                                                {{ allergy_info.get('allergy_symptoms').get('symptoms')[element] }}
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <strong class="profile-color">Allergens affect me</strong><br>
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-responsive table-user-information">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <ul class="list-group">
+                                            {% for element in range(0, allergens_list_len, 1) %}
+                                            <li class="list-group-item list-group-item-info">
+                                                {{ allergy_info.get('allergens').get('allergens')[element] }}
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    
+                    <strong class="profile-color">My medicines</strong><br>
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-responsive table-user-information">
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        Allergic rhinitis - nose
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ allergy_info.get('medicines').get('allergic_rhinitis_nose') }}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Allergic rhinitis - mouth
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ allergy_info.get('medicines').get('allergic_rhinitis_mouth') }}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Allergic rhinitis - injection
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ allergy_info.get('medicines').get('allergic_rhinitis_injection') }}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Allergic asthma - mouth
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ allergy_info.get('medicines').get('allergic_asthma_mouth') }}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Allergic conjunctivitis - drops
+                                    </td>
+                                    <td class="text-primary">
+                                        {{ allergy_info.get('medicines').get('allergic_conjunctivitis_drops') }}
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br>
+</div>
+{% endblock account_info %}
+
+<!-- SIDE BAR -->
+{% block change_password %}
+<form method="POST" action="">
+    <!-- hidden_tag() adds csrf token. Its like htmlspecialchars() in pure html -->
+    {{ form_change_password.hidden_tag() }}
+    <fieldset class="form-group">
+        <legend class="border-bottom mb-4"><i class='fas fa-key'></i> Change Password</legend>
+
+        <div class="form-group">
+            {{ form_change_password.current_password.label(class="form-control-label") }}
+            {{ form_change_password.current_password(class="form-control form-control-lg") }}
+        </div>
+
+        <div class="form-group">
+            {{ form_change_password.new_password.label(class="form-control-label") }} 
+            {{ form_change_password.new_password(class="form-control form-control-lg") }}
+        </div>
+
+        <div class="form-group">
+            {{ form_change_password.confirm_new_password.label(class="form-control-label") }}
+            {{ form_change_password.confirm_new_password(class="form-control form-control-lg") }}
+        </div>
+
+    </fieldset>
+    <div class="form-group">
+        {{ form_change_password.submit_change_password(class="btn btn-blue-grey curved_edge_button") }}
+    </div>
+</form>
+{% endblock change_password %}
+
+
+{% block update_account %}
+<form method="POST" action="">
+    {{ form_update.hidden_tag() }}
+    <fieldset class="form-group">
+        <legend class="border-bottom mb-4"><i class='far fa-address-card'></i> Update Username</legend>
+
+        <div class="form-group">
+            {{ form_update.username.label(class="form-control-label") }}
+            {{ form_update.username(class="form-control form-control-lg") }}
+        </div>
+
+    </fieldset>
+    <div class="form-group">
+        {{ form_update.submit_update(class="btn btn-blue-grey curved_edge_button") }}
+    </div>
+</form>
+{% endblock update_account %}
+
+
+{% block delete_account %}
+<form method="POST" action="">
+    {{ form_delete.hidden_tag() }}
+    <fieldset class="form-group">
+        <legend class="border-bottom mb-4"><i class='fas fa-user-times'></i> Delete Account </legend>
+
+        <button type="button" class="btn btn-danger curved_edge_button" data-toggle="modal" data-target="#exampleModalLong">
+            Delete Account
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Confirm Deletion</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete your account?</p>
+                        <p>Note that all data will be permanently deleted and you will no longer have access to your account.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                        {{ form_delete.submit_deletion(class="btn btn-danger") }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</form>
+{% endblock delete_account %}

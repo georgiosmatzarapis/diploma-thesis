@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% include 'snippets/links.html' %}
+
+    {% block links %}{% endblock %}
+
+    {% if title %}
+        <title>Allergy Map USA - {{ title }}</title>
+    {% else %}
+        <title>Allergy Map USA</title>
+    {% endif %}
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-steel fixed-top">
+            <a class="navbar-brand" style="margin: auto;" href="#">Allergymap - US</a>
+        </nav>
+    </header>
+
+    <div class="content_allergy_flogin">
+        <main role="main" class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                                <div class="alert alert-{{ category }}">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </main>
+    </div>
+
+    {% include 'snippets/footer.html' %}
+    
+    {% include 'snippets/scripts.html' %}
+   
+    {% block extra_scripts_logged_in %}{% endblock %}
+    
+</body>
+
+</html>

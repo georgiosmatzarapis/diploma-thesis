@@ -1,0 +1,12 @@
+{% if session.get('first_login') %}
+    {% extends "snippets/layouts/layout_first_login.html" %}
+{% else %}
+    {% extends "snippets/layouts/layout_general.html" %}
+{% endif %}
+
+{% block content %}
+<div class="content">
+    <h1>You don't have permission to do that (403)</h1>
+    <p>Please check your account and try again</p>
+</div>
+{% endblock content %}

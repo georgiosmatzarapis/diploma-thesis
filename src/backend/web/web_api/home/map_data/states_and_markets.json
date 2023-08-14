@@ -1,0 +1,772 @@
+[
+    {
+        "markets": [
+            "BFL",
+            "BHX",
+            "FAT",
+            "LAS",
+            "LAX",
+            "MFR",
+            "PRC",
+            "RDD",
+            "RNO",
+            "SAC",
+            "SAN",
+            "SBA",
+            "SFO",
+            "YUM"
+        ],
+        "state_code": "CA"
+    },
+    {
+        "markets": [
+            "DCA"
+        ],
+        "state_code": "DC"
+    },
+    {
+        "markets": [
+            "ABY",
+            "DAB",
+            "EYW",
+            "JAX",
+            "MCO",
+            "MGM",
+            "MIA",
+            "PBI",
+            "PNS",
+            "TLH",
+            "TPA"
+        ],
+        "state_code": "FL"
+    },
+    {
+        "markets": [
+            "ABY",
+            "AHN",
+            "ATL",
+            "AVL",
+            "CHA",
+            "CLX",
+            "CSG",
+            "DNL",
+            "GSP",
+            "JAX",
+            "MCN",
+            "SAV",
+            "TLH",
+            "TYS"
+        ],
+        "state_code": "GA"
+    },
+    {
+        "markets": [
+            "BNO",
+            "BOI",
+            "BTM",
+            "ELY",
+            "FCA",
+            "GEG",
+            "LND",
+            "LWS",
+            "MSO",
+            "PIH",
+            "SLC",
+            "WMC"
+        ],
+        "state_code": "ID"
+    },
+    {
+        "markets": [
+            "BRL",
+            "CGI",
+            "CMI",
+            "EBQ",
+            "EVV",
+            "MKE",
+            "MLI",
+            "ORD",
+            "PIA",
+            "RFD",
+            "SPI",
+            "STL",
+            "UIN"
+        ],
+        "state_code": "IL"
+    },
+    {
+        "markets": [
+            "ALO",
+            "BRL",
+            "CID",
+            "DSM",
+            "EBQ",
+            "FSD",
+            "MCI",
+            "MLI",
+            "OMA",
+            "RST",
+            "SUX"
+        ],
+        "state_code": "IA"
+    },
+    {
+        "markets": [
+            "BKW",
+            "BNA",
+            "BWG",
+            "CGI",
+            "CIN",
+            "EVV",
+            "HTS",
+            "JKL",
+            "LEX",
+            "SDF",
+            "TRI",
+            "TYS"
+        ],
+        "state_code": "KY"
+    },
+    {
+        "markets": [
+            "BPT",
+            "BTR",
+            "GPT",
+            "JAN",
+            "LCH",
+            "MLU",
+            "MSY",
+            "SHV"
+        ],
+        "state_code": "LA"
+    },
+    {
+        "markets": [
+            "AOO",
+            "BWI",
+            "CXY",
+            "DCA",
+            "DOV",
+            "ELK",
+            "IAD",
+            "ILG",
+            "PIT"
+        ],
+        "state_code": "MD"
+    },
+    {
+        "markets": [
+            "APN",
+            "AUW",
+            "DLH",
+            "DTW",
+            "FNT",
+            "FWA",
+            "GRB",
+            "GRR",
+            "HTL",
+            "LAN",
+            "MKG",
+            "SBN",
+            "TOL",
+            "TVC"
+        ],
+        "state_code": "MI"
+    },
+    {
+        "markets": [
+            "ABR",
+            "BJI",
+            "DLH",
+            "EAU",
+            "FAR",
+            "FSD",
+            "GFK",
+            "HON",
+            "INL",
+            "MSP",
+            "RST",
+            "STC"
+        ],
+        "state_code": "MN"
+    },
+    {
+        "markets": [
+            "BRL",
+            "CGI",
+            "COU",
+            "DSM",
+            "LIT",
+            "MCI",
+            "MEM",
+            "MKL",
+            "OMA",
+            "SGF",
+            "STL",
+            "TOP",
+            "TUL",
+            "UIN"
+        ],
+        "state_code": "MO"
+    },
+    {
+        "markets": [
+            "ABE",
+            "ALB",
+            "AVP",
+            "BDL",
+            "BDR",
+            "BGM",
+            "BTV",
+            "BUF",
+            "ERI",
+            "EWR",
+            "GTB",
+            "JHW",
+            "LGA",
+            "ROC",
+            "SYR"
+        ],
+        "state_code": "NY"
+    },
+    {
+        "markets": [
+            "AST",
+            "BNO",
+            "BOI",
+            "EUG",
+            "LWS",
+            "MFR",
+            "PDT",
+            "PDX",
+            "RDD",
+            "RNO",
+            "SLE",
+            "WMC",
+            "YKM"
+        ],
+        "state_code": "OR"
+    },
+    {
+        "markets": [
+            "AVL",
+            "BNA",
+            "BWG",
+            "CGI",
+            "CHA",
+            "HSV",
+            "MEM",
+            "MKL",
+            "TRI",
+            "TYS"
+        ],
+        "state_code": "TN"
+    },
+    {
+        "markets": [
+            "ABI",
+            "ACT",
+            "AMA",
+            "AUS",
+            "BPT",
+            "BRO",
+            "CRP",
+            "DDC",
+            "DFW",
+            "DRT",
+            "ELP",
+            "FSM",
+            "FTW",
+            "IAH",
+            "LBB",
+            "LCH",
+            "LRD",
+            "MAF",
+            "ROW",
+            "SAT",
+            "SHV",
+            "SJT",
+            "SPS",
+            "VCT"
+        ],
+        "state_code": "TX"
+    },
+    {
+        "markets": [
+            "AOO",
+            "BKW",
+            "DCA",
+            "DOV",
+            "ELK",
+            "GSO",
+            "IAD",
+            "JKL",
+            "LYH",
+            "ORF",
+            "RDU",
+            "RIC",
+            "ROA",
+            "TRI",
+            "TYS"
+        ],
+        "state_code": "VA"
+    },
+    {
+        "markets": [
+            "AUW",
+            "DLH",
+            "EAU",
+            "EBQ",
+            "GRB",
+            "MKE",
+            "MSN",
+            "MSP",
+            "RFD",
+            "RST",
+            "STC"
+        ],
+        "state_code": "WI"
+    },
+    {
+        "markets": [
+            "ABQ",
+            "FLG",
+            "FMN",
+            "ICX",
+            "LAS",
+            "PHX",
+            "PRC",
+            "SVC",
+            "TUS",
+            "YUM"
+        ],
+        "state_code": "AZ"
+    },
+    {
+        "markets": [
+            "CGI",
+            "FSM",
+            "JAN",
+            "LIT",
+            "MEM",
+            "MKL",
+            "MLU",
+            "SGF",
+            "SHV",
+            "TUL"
+        ],
+        "state_code": "AR"
+    },
+    {
+        "markets": [
+            "ALS",
+            "AMA",
+            "BFF",
+            "COS",
+            "CYS",
+            "DDC",
+            "DEN",
+            "FMN",
+            "GJT",
+            "GLD",
+            "LBF",
+            "LND",
+            "PUB",
+            "PUC"
+        ],
+        "state_code": "CO"
+    },
+    {
+        "markets": [
+            "BWG",
+            "CIN",
+            "CMI",
+            "DAY",
+            "EVV",
+            "FWA",
+            "IND",
+            "LAN",
+            "ORD",
+            "SBN",
+            "SDF"
+        ],
+        "state_code": "IN"
+    },
+    {
+        "markets": [
+            "BDL",
+            "BDR",
+            "ORN",
+            "PVD"
+        ],
+        "state_code": "CT"
+    },
+    {
+        "markets": [
+            "BFF",
+            "CNK",
+            "CYS",
+            "FSD",
+            "GLD",
+            "GRI",
+            "LBF",
+            "LNK",
+            "MCI",
+            "OFK",
+            "OMA",
+            "RAP",
+            "SUX",
+            "TOP",
+            "VTN"
+        ],
+        "state_code": "NE"
+    },
+    {
+        "markets": [
+            "ABQ",
+            "ALS",
+            "AMA",
+            "ELP",
+            "FMN",
+            "LBB",
+            "MAF",
+            "PUB",
+            "ROW",
+            "SAF",
+            "SVC"
+        ],
+        "state_code": "NM"
+    },
+    {
+        "markets": [
+            "AVL",
+            "CHA",
+            "CLT",
+            "FLO",
+            "GSO",
+            "GSP",
+            "HSE",
+            "ILM",
+            "ORF",
+            "RDU",
+            "RIC",
+            "TRI",
+            "TYS"
+        ],
+        "state_code": "NC"
+    },
+    {
+        "markets": [
+            "CAK",
+            "CIN",
+            "CLE",
+            "CMH",
+            "CRW",
+            "DAY",
+            "ELK",
+            "ERI",
+            "FWA",
+            "HTS",
+            "MFD",
+            "PIT",
+            "TOL",
+            "YNG"
+        ],
+        "state_code": "OH"
+    },
+    {
+        "markets": [
+            "BGR",
+            "CAR",
+            "CON",
+            "MON",
+            "PWM"
+        ],
+        "state_code": "ME"
+    },
+    {
+        "markets": [
+            "ALB",
+            "BDL",
+            "BOS",
+            "CON",
+            "ORN",
+            "PVD"
+        ],
+        "state_code": "MA"
+    },
+    {
+        "markets": [
+            "BFM",
+            "BTR",
+            "GPT",
+            "HSV",
+            "JAN",
+            "LIT",
+            "MEI",
+            "MEM",
+            "MKL",
+            "MLU",
+            "MSY",
+            "TUP"
+        ],
+        "state_code": "MS"
+    },
+    {
+        "markets": [
+            "BIL",
+            "BTM",
+            "DIK",
+            "FCA",
+            "GEG",
+            "GGW",
+            "GTF",
+            "ISN",
+            "LND",
+            "LWS",
+            "MLS",
+            "MSO",
+            "PIH",
+            "RAP",
+            "SHR"
+        ],
+        "state_code": "MT"
+    },
+    {
+        "markets": [
+            "AMA",
+            "DDC",
+            "DFW",
+            "FSM",
+            "ICT",
+            "OKC",
+            "PUB",
+            "SGF",
+            "SHV",
+            "SPS",
+            "TUL"
+        ],
+        "state_code": "OK"
+    },
+    {
+        "markets": [
+            "AHN",
+            "AVL",
+            "CAE",
+            "CHS",
+            "CLT",
+            "CLX",
+            "DNL",
+            "FLO",
+            "GSP",
+            "SAV"
+        ],
+        "state_code": "SC"
+    },
+    {
+        "markets": [
+            "ABR",
+            "BFF",
+            "BIS",
+            "DIK",
+            "FAR",
+            "FSD",
+            "HON",
+            "MLS",
+            "OFK",
+            "PIR",
+            "RAP",
+            "SUX",
+            "VTN"
+        ],
+        "state_code": "SD"
+    },
+    {
+        "markets": [
+            "ELY",
+            "FLG",
+            "FMN",
+            "GJT",
+            "ICX",
+            "LND",
+            "PIH",
+            "PUC",
+            "SLC"
+        ],
+        "state_code": "UT"
+    },
+    {
+        "markets": [
+            "AST",
+            "BLI",
+            "GEG",
+            "LWS",
+            "OLM",
+            "PDT",
+            "PDX",
+            "SEA",
+            "YKM"
+        ],
+        "state_code": "WA"
+    },
+    {
+        "markets": [
+            "AOO",
+            "BKW",
+            "CRW",
+            "ELK",
+            "HTS",
+            "IAD",
+            "PIT",
+            "ROA"
+        ],
+        "state_code": "WV"
+    },
+    {
+        "markets": [
+            "BFF",
+            "BIL",
+            "BTM",
+            "CPR",
+            "CYS",
+            "GJT",
+            "LND",
+            "PIH",
+            "PUC",
+            "RAP",
+            "SHR",
+            "SLC"
+        ],
+        "state_code": "WY"
+    },
+    {
+        "markets": [
+            "DOV",
+            "ILG"
+        ],
+        "state_code": "DE"
+    },
+    {
+        "markets": [
+            "ORN",
+            "PVD"
+        ],
+        "state_code": "RI"
+    },
+    {
+        "markets": [
+            "ABY",
+            "ATL",
+            "BFM",
+            "BHM",
+            "CHA",
+            "CSG",
+            "HSV",
+            "MEI",
+            "MGM",
+            "MKL",
+            "PNS",
+            "TLH",
+            "TUP"
+        ],
+        "state_code": "AL"
+    },
+    {
+        "markets": [
+            "ABR",
+            "BIS",
+            "DIK",
+            "FAR",
+            "GFK",
+            "ISN",
+            "JMS",
+            "MBX"
+        ],
+        "state_code": "ND"
+    },
+    {
+        "markets": [
+            "ABE",
+            "AOO",
+            "AVP",
+            "BGM",
+            "CXY",
+            "ELK",
+            "ERI",
+            "EWR",
+            "IAD",
+            "ILG",
+            "IPT",
+            "JHW",
+            "PHL",
+            "PIT",
+            "YNG"
+        ],
+        "state_code": "PA"
+    },
+    {
+        "markets": [
+            "ALB",
+            "BTV",
+            "CON",
+            "MON",
+            "ORN"
+        ],
+        "state_code": "VT"
+    },
+    {
+        "markets": [
+            "CNK",
+            "DDC",
+            "GLD",
+            "GRI",
+            "ICT",
+            "LBF",
+            "LNK",
+            "MCI",
+            "PUB",
+            "SGF",
+            "TOP",
+            "TUL"
+        ],
+        "state_code": "KS"
+    },
+    {
+        "markets": [
+            "BNO",
+            "BOI",
+            "ELY",
+            "FAT",
+            "ICX",
+            "LAS",
+            "PIH",
+            "RDD",
+            "RNO",
+            "SLC",
+            "WMC"
+        ],
+        "state_code": "NV"
+    },
+    {
+        "markets": [
+            "BOS",
+            "CON",
+            "MON",
+            "ORN",
+            "PWM"
+        ],
+        "state_code": "NH"
+    },
+    {
+        "markets": [
+            "ABE",
+            "ACY",
+            "DOV",
+            "EWR",
+            "ILG",
+            "LGA",
+            "PHL"
+        ],
+        "state_code": "NJ"
+    }
+]
